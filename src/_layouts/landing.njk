@@ -1,0 +1,46 @@
+{% include "partials/_head.njk" %}
+<body>
+{% include "partials/_navigation.njk" %}
+<main>
+    <div class="main-container">
+        <section class="content-row">
+            <div class="card welcome">
+                <h3>{{ welcome.name }}</h3>
+                <p>{{ welcome.title }}</p>
+                <p>{{ welcome.desc }}</p>
+            </div>
+
+            <div class="card profile-photo">
+                <h3>{{ welcome.greetings }}</h3>
+                <img src="{{ welcome.profile }}">
+            </div>
+        </section>
+
+        <section class="content-row">
+            <div class="card tags">
+                <h3>Interests</h3>
+                <div class="tag-list">
+                    <a href="#" class="tag">python</a>
+                    <a href="#" class="tag">django</a>
+                    <a href="#" class="tag">web</a>
+                    <a href="#" class="tag">aws</a>
+                    <a href="#" class="tag">teaching</a>
+                    <a href="#" class="tag">design</a>
+                    <a href="#" class="tag">forest</a>
+                    <a href="#" class="tag">fun</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-row">
+            <div class="card recent">
+                <h3>Recent blogs</h3>
+                <div class="blog-list">
+                    {{ content | safe }}
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,205 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 1200px;
+    overflow: hidden;
+    min-height: 92vh;
+    margin: auto;
+}
+
+header {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    color: black;
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    margin-right: 40px;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+header li {
+    margin-left: 20px;
+}
+
+header a {
+    color: black;
+    font-family: "Lexend Mega";
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+main {
+    background: #ff69b4;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 40px;
+}
+
+.card {
+    border: 3px solid black;
+    box-shadow: 8px 8px black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 60px 20px 20px 20px;
+    text-align: left;
+}
+
+.card h3 {
+    font-family: "Outfit";
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 1;
+}
+
+.card p {
+    line-height: 2;
+    margin: 10px 0 0 0;
+}
+
+.welcome {
+    background: #FBFFB1;
+    color: black;
+    font-family: "Lexend Mega", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    width: 580px;
+}
+
+.profile-photo {
+    padding: 110px 0;
+    background: #79C9D9;
+    position: relative;
+    width: 500px;
+    max-height: 200px;
+    min-width: 300px;
+}
+
+.profile-photo h3 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.profile-photo img {
+    position: absolute;
+    height: 270px;
+    min-width: 250px;
+    bottom: 0;
+    right: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tags {
+    background: #FFF2F1;
+    height: fit-content;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.tag {
+    background: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px;
+    padding: 5px 15px;
+    margin: 8px;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.recent {
+    width: 100%;
+    background: #FFB832;
+    margin: 60px 20px;
+}
+
+.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.blog-item {
+    background-color: #fff;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 0px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 4px 4px;
+    width: 320px;
+    height: fit-content;
+}
+
+.blog-item img {
+    display: block;
+    height: 250px;
+    width: 250px;
+    margin: 0 auto 20px auto; /* Center the image and add bottom margin */
+    border: 3px solid black;
+}
+
+.blog-item h3 {
+    margin-top: 0; /* Remove top margin if any */
+    font-size: 1.5em;
+}
+
+.blog-item p {
+    line-height: 1.4;
+}
