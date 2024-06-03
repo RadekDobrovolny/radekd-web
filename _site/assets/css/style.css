@@ -10,7 +10,7 @@
     --text-color: black;
     --shadow-color: black;
     --border: 3px solid black;
-    --thic-shadow: 8px 8px black;
+    --thic-shadow: 6px 8px black;
     color: var(--text-color);
     background: white;
 }
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    font-family: "Sora", sans-serif;
+    font-family: "Outfit", sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -130,9 +130,9 @@ body.dark-mode .spruce {
     height: 85px;
     margin-right: 5px;
     margin-top: -10px;
-    border-bottom: 3px solid black;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border-bottom: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
     border-top: 0;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -247,7 +247,7 @@ body.dark-mode .tags {
 .tag {
     background: white;
     color: black;
-    border: 3px solid black;
+    border: var(--border);
     border-radius: 5px;
     box-shadow: 4px 4px;
     padding: 5px 15px;
@@ -282,9 +282,13 @@ body.dark-mode .recent {
     margin: 40px 0;
 }
 
+.blog-list a {
+    color: black;
+}
+
 .blog-item {
     background-color: #fff;
-    border: 3px solid black;
+    border: var(--border);
     border-radius: 5px;
     margin: 0px;
     padding: 30px;
@@ -294,11 +298,21 @@ body.dark-mode .recent {
     height: fit-content;
 }
 
+body.dark-mode .blog-item {
+    border: 3px solid black;
+    box-shadow: 3px 4px black;
+    color: black;
+}
+
 .blog-item img {
     display: block;
     height: 250px;
     width: 250px;
     margin: 0 auto 20px auto; /* Center the image and add bottom margin */
+    border: var(--border);
+}
+
+body.dark-mode .blog-item img {
     border: 3px solid black;
 }
 

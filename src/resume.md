@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: resume
 title: "Resumé"
 tags: page
 ---
