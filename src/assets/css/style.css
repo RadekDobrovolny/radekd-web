@@ -6,6 +6,25 @@
     padding: 0;
 }
 
+:root {
+    --text-color: black;
+    --shadow-color: black;
+    --border: 3px solid black;
+    --thic-shadow: 8px 8px black;
+    color: var(--text-color);
+    background: white;
+}
+
+body.dark-mode {
+    --text-color: #F6F7F8;
+    --shadow-color: #F6F7F8;
+    --border: 3px solid var(--shadow-color);
+    --thic-shadow: 8px 8px var(--shadow-color);
+    --backgroud-color: #0C0F0A;
+    color: var(--text-color);
+    background: var(--backgroud-color);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -29,15 +48,20 @@ header {
     margin: auto;
     background: white;
     color: black;
-    min-height: 8vh;
+    min-height: 95px;
+}
+
+body.dark-mode header{
+    background: var(--backgroud-color);
+    color: white;
 }
 
 .header-container {
-    width: 100%;
+    width: 96%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 20px;
 }
 
 header nav {
@@ -46,23 +70,52 @@ header nav {
 }
 
 header ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
     display: flex;
+    align-items: center;
+    list-style: none;
 }
 
 header li {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
-header a {
-    color: black;
+header a, .switch {
+    color: var(--text-color);
     font-family: "Lexend Mega";
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
     padding: 0 20px;
+}
+
+body.dark-mode a{
+    color: var(--text-color);
+}
+
+.switch {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch img {
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.ice-cream {
+    background: #ffe599;
+}
+
+body.dark-mode .ice-cream, .spruce {
+    background: transparent;
+}
+
+body.dark-mode .spruce {
+    background: var(--shadow-color);
 }
 
 .xylophone {
@@ -74,7 +127,7 @@ header a {
 
 .key {
     width: 60px;
-    height: 95px;
+    height: 85px;
     margin-right: 5px;
     margin-top: -10px;
     border-bottom: 3px solid black;
@@ -87,8 +140,19 @@ header a {
     cursor: pointer;
 }
 
+body.dark-mode .key {
+    border-bottom: 2px solid var(--shadow-color);
+    border-left: 2px solid var(--shadow-color);
+    border-right: 2px solid var(--shadow-color);
+    box-shadow: 3px 3px var(--shadow-color);
+}
+
 main {
     background: #ff69b4;
+}
+
+body.dark-mode main {
+    background: var(--backgroud-color);
 }
 
 .content-row {
@@ -99,8 +163,8 @@ main {
 }
 
 .card {
-    border: 3px solid black;
-    box-shadow: 8px 8px black;
+    border: var(--border);
+    box-shadow: var(--thic-shadow);
     border-radius: 10px;
     padding: 20px;
     margin: 60px 20px 20px 20px;
@@ -120,8 +184,7 @@ main {
 }
 
 .welcome {
-    background: #FBFFB1;
-    color: black;
+    background: #ffcf40;
     font-family: "Lexend Mega", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
@@ -129,13 +192,22 @@ main {
     width: 580px;
 }
 
+body.dark-mode .welcome {
+    background: #3D7068;
+    font-weight: 300;
+}
+
 .profile-photo {
     padding: 110px 0;
-    background: #79C9D9;
+    background: #D7FCD4;
     position: relative;
     width: 500px;
     max-height: 200px;
     min-width: 300px;
+}
+
+body.dark-mode .profile-photo {
+    background: #816C61;
 }
 
 .profile-photo h3 {
@@ -157,8 +229,12 @@ a {
 }
 
 .tags {
-    background: #FFF2F1;
+    background: #618B4A;
     height: fit-content;
+}
+
+body.dark-mode .tags {
+    background: #0C7C59;
 }
 
 .tag-list {
@@ -182,10 +258,20 @@ a {
     text-decoration: none;
 }
 
+body.dark-mode .tag {
+    background: #55868C;
+    border: var(--border);
+    box-shadow: 4px 4px var(--shadow-color);
+}
+
 .recent {
     width: 100%;
-    background: #FFB832;
+    background: #9CADCE;
     margin: 60px 20px;
+}
+
+body.dark-mode .recent {
+    background: #8D6346;
 }
 
 .blog-list {
