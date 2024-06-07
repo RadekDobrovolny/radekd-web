@@ -17,10 +17,10 @@
 
 body.dark-mode {
     --text-color: #F6F7F8;
-    --shadow-color: #F6F7F8;
+    --shadow-color: #ffd966;
     --border: 3px solid var(--shadow-color);
     --thic-shadow: 8px 8px var(--shadow-color);
-    --backgroud-color: #0C0F0A;
+    --backgroud-color: #111827;
     color: var(--text-color);
     background: var(--backgroud-color);
 }
@@ -43,21 +43,15 @@ body {
     margin: auto;
 }
 
-header {
-    max-width: 1200px;
-    margin: auto;
-    background: white;
-    color: black;
-    min-height: 95px;
-}
-
 body.dark-mode header{
     background: var(--backgroud-color);
     color: white;
 }
 
-.header-container {
-    width: 96%;
+header {
+    background: white;
+    max-width: 1200px;
+    min-height: 95px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -73,19 +67,16 @@ header ul {
     display: flex;
     align-items: center;
     list-style: none;
-}
-
-header li {
-    margin-left: 10px;
+    margin-left: 2em;
 }
 
 header a, .switch {
     color: var(--text-color);
-    font-family: "Lexend Mega";
+    font-family: "Lexend Mega", sans-serif;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 20px;
-    padding: 0 20px;
+    font-size: 1.3rem;
+    padding-right: 2rem;
 }
 
 body.dark-mode a{
@@ -95,7 +86,6 @@ body.dark-mode a{
 .switch {
     background: transparent;
     border: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -121,30 +111,24 @@ body.dark-mode .spruce {
 .xylophone {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
+    gap: 20px;
+    padding-left: 20px;
     margin-top: 0;
 }
 
 .key {
     width: 60px;
-    height: 85px;
-    margin-right: 5px;
-    margin-top: -10px;
-    border-bottom: var(--border);
-    border-left: var(--border);
-    border-right: var(--border);
-    border-top: 0;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: 3px 3px;
+    height: 95px;
+    margin-top: -40px;
+    border: var(--border);
+    border-radius: 15px;
+    box-shadow: 2px 3px black;
     cursor: pointer;
 }
 
 body.dark-mode .key {
-    border-bottom: 2px solid var(--shadow-color);
-    border-left: 2px solid var(--shadow-color);
-    border-right: 2px solid var(--shadow-color);
-    box-shadow: 3px 3px var(--shadow-color);
+    border: 2px solid var(--shadow-color);
+    box-shadow: 2px 3px var(--shadow-color);
 }
 
 main {
@@ -193,7 +177,7 @@ body.dark-mode main {
 }
 
 body.dark-mode .welcome {
-    background: #3D7068;
+    background: #297045;
     font-weight: 300;
 }
 
@@ -207,7 +191,7 @@ body.dark-mode .welcome {
 }
 
 body.dark-mode .profile-photo {
-    background: #816C61;
+    background: #B33951;
 }
 
 .profile-photo h3 {
@@ -234,7 +218,7 @@ a {
 }
 
 body.dark-mode .tags {
-    background: #0C7C59;
+    background: #297045;
 }
 
 .tag-list {
@@ -259,7 +243,7 @@ body.dark-mode .tags {
 }
 
 body.dark-mode .tag {
-    background: #55868C;
+    background: #B33951;
     border: var(--border);
     box-shadow: 4px 4px var(--shadow-color);
 }
@@ -270,8 +254,52 @@ body.dark-mode .tag {
     margin: 60px 20px;
 }
 
+.resume {
+    background: white;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+}
+
+body.dark-mode .resume {
+    background: var(--backgroud-color);
+}
+
+.resume h1, .resume h2 {
+    display: inline-block;
+    border: var(--border);
+    background: #ffd966;
+    font-family: "Lexend Mega", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    padding: 5px 15px;
+    margin: 10px 0;
+}
+
+body.dark-mode h1 {
+    color: var(--backgroud-color);
+    border-color: var(--shadow-color);
+}
+
+body.dark-mode h2 {
+    color: var(--backgroud-color);
+    border-color: #ffe599;
+}
+
+.resume h2 {
+    background: #ffe599;
+    font-size: 1em;
+}
+
+.resume p {
+    font-family: "Lexend Mega", sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
 body.dark-mode .recent {
-    background: #8D6346;
+    background: var(--backgroud-color);
 }
 
 .blog-list {
@@ -287,7 +315,7 @@ body.dark-mode .recent {
 }
 
 .blog-item {
-    background-color: #fff;
+    background-color: white;
     border: var(--border);
     border-radius: 5px;
     margin: 0px;
@@ -299,8 +327,9 @@ body.dark-mode .recent {
 }
 
 body.dark-mode .blog-item {
-    border: 3px solid black;
-    box-shadow: 3px 4px black;
+    background-color: white;
+    border: 3px solid var(--backgroud-color);
+    box-shadow: 3px 4px var(--shadow-color);
     color: black;
 }
 
@@ -313,7 +342,7 @@ body.dark-mode .blog-item {
 }
 
 body.dark-mode .blog-item img {
-    border: 3px solid black;
+    border: 3px solid var(--backgroud-color);
 }
 
 .blog-item h3 {
@@ -323,4 +352,50 @@ body.dark-mode .blog-item img {
 
 .blog-item p {
     line-height: 1.4;
+}
+
+.polaroid {
+    display: inline-block;
+    background: white;
+    padding: 25px 25px 0 25px;
+    transform: rotate(-8deg); /* Adjust the angle as needed */
+    transition: transform 0.2s;
+    border: var(--border);
+    box-shadow: 8px 8px var(--shadow-color);
+}
+
+body.dark-mode .polaroid {
+    border: 3px solid black;
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+}
+
+.polaroid.left {
+    float: left;
+    margin: 50px 50px 25px -160px;
+    shape-outside: polygon(0 0, 66% 0, 100% 90%, 0% 100%) margin-box;
+}
+
+.polaroid.right {
+    float: right;
+    margin: 20px -120px 20px 30px;
+    transform: rotate(5deg); /* Adjust the angle as needed */
+    shape-outside: polygon(20% 0, 100% 0, 100% 100%, 0 90%);
+}
+
+.polaroid span {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8em;
+    align-items: center;
+    text-align: center;
+    height: 75px;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    max-width: 200px;
+    line-height: 0.9;
+    color: black;
 }

@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&family=Outfit:wght@100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -18,28 +19,65 @@
 </head>
 <body>
 <header>
-    <div class="header-container">
-        <div class="xylophone">
-            <button data-note="C" class="key" style="background-color: #ffbf00;"></button>
-            <button data-note="D" class="key" style="background-color: #ffc51a;"></button>
-            <button data-note="E" class="key" style="background-color: #ffcc33;"></button>
-            <button data-note="F" class="key" style="background-color: #ffd24d;"></button>
-            <button data-note="G" class="key" style="background-color: #ffd966;"></button>
-            <button data-note="A" class="key" style="background-color: #ffdf80;"></button>
-            <button data-note="B" class="key" style="background-color: #ffe599;"></button>
-        </div>
-        <nav>
-            <ul><li><a href="/">Home</a></li><li><a href="/resume/">Resumé</a></li><li><a href="/blog/">Blog</a></li><li>
-                    <button class="switch" id="switch"><img src="/assets/images/ice-cream.png" class="ice-cream"><img
-                            src="/assets/images/spruce.png" class="spruce"></button>
-                </li>
-            </ul>
-        </nav>
+    <div class="xylophone">
+        <button data-note="C" class="key" style="background-color: #ffbf00;"></button>
+        <button data-note="D" class="key" style="background-color: #ffc51a;"></button>
+        <button data-note="E" class="key" style="background-color: #ffcc33;"></button>
+        <button data-note="F" class="key" style="background-color: #ffd24d;"></button>
+        <button data-note="G" class="key" style="background-color: #ffd966;"></button>
+        <button data-note="A" class="key" style="background-color: #ffdf80;"></button>
+        <button data-note="B" class="key" style="background-color: #ffe599;"></button>
     </div>
+    <nav>
+        <ul><li><a href="/">Home</a></li><li><a href="/resume/">Resumé</a></li><li><a href="/blog/">Blog</a></li><li>
+                <button class="switch" id="switch"><img src="/assets/images/ice-cream.png" class="ice-cream"><img
+                        src="/assets/images/spruce.png" class="spruce"></button>
+            </li>
+        </ul>
+    </nav>
 </header>
 <main>
     <div class="main-container">
-        <h3>AHoj</h3>
+        <section class="content-row">
+            <div class="card resume">
+                <h1>programming</h1>
+<p>Currently, I focus on data engineering, but I also have
+a lot of experience in backend development of web applications.
+I only do frontend in small projects for fun.</p>
+<h2>python</h2>
+<p><strong>basics:</strong> numbers, bools, conditions, strings, comparisons,
+lists, loops, tuples, dicts, sets, classes</p>
+<p><strong>advanced:</strong> list/dicts comprehension, iterators, generators,
+fixtures, decorators</p>
+<p><strong>libs:</strong> datetime, unittest, pytest, os, sys, dataclasses, abc,
+itertools, functools, json, re, logging, pathlib, csv, math</p>
+<p><strong>complex libs:</strong> requests, pandas, numpy, pygame, pillow, sqlalchemy,
+asyncio, turtle</p>
+<p><strong>style:</strong> flake8, isort, black, pylint</p>
+<p><strong>to learn list:</strong> celery</p>
+<h2>django</h2>
+<p>Starting projects, managing app, URL routing, models, views,
+migrations, templates, forms, authentication, i18n</p>
+<p>I've built an in-production CRM for small business by myself.</p>
+<p><strong>to learn list:</strong> middleware, django REST framework, signals</p>
+<h2>git</h2>
+<p><strong>commands:</strong> clone, pull, push, commit, rebase, branch, merge,
+checkout, stash, log, diff, remote, squash</p>
+<p><strong>storage:</strong> GitHub, Gitlab, bitbucket</p>
+<p><strong>to learn list:</strong> hooks, cherry-pick, reflog, submodules</p>
+<h2>javascript</h2>
+<p>Functions, arrays, objects, conditionals, loops, DOM manipulation, event handling</p>
+<p>I've written several short scripts that work with the DOM on web pages.</p>
+<p><strong>to learn list:</strong> ES6+ features, single page apps frameworks</p>
+<h1>operations</h1>
+<p>Ble ble.</p>
+<h2>docker</h2>
+<p>Compose</p>
+<h2>kubernetes</h2>
+<p>Manifests</p>
+
+            </div>
+        </section>
     </div>
 </main>
 <script src="/assets/scripts/xylophone.js"></script>
