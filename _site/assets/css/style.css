@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    font-family: "Outfit", sans-serif;
+    font-family: "Lexend Mega", sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -43,7 +43,7 @@ body {
     margin: auto;
 }
 
-body.dark-mode header{
+body.dark-mode header {
     background: var(--backgroud-color);
     color: white;
 }
@@ -72,14 +72,13 @@ header ul {
 
 header a, .switch {
     color: var(--text-color);
-    font-family: "Lexend Mega", sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.3rem;
     padding-right: 2rem;
 }
 
-body.dark-mode a{
+body.dark-mode a {
     color: var(--text-color);
 }
 
@@ -156,7 +155,7 @@ body.dark-mode main {
 }
 
 .card h3 {
-    font-family: "Outfit";
+    font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-size: 3em;
     line-height: 1;
@@ -165,13 +164,12 @@ body.dark-mode main {
 .card p {
     line-height: 2;
     margin: 10px 0 0 0;
+    font-weight: 200;
 }
 
 .welcome {
     background: #ffcf40;
-    font-family: "Lexend Mega", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 200;
     font-style: normal;
     width: 580px;
 }
@@ -191,7 +189,7 @@ body.dark-mode .welcome {
 }
 
 body.dark-mode .profile-photo {
-    background: #B33951;
+    background: #A52422;
 }
 
 .profile-photo h3 {
@@ -243,7 +241,7 @@ body.dark-mode .tags {
 }
 
 body.dark-mode .tag {
-    background: #B33951;
+    background: #A52422;
     border: var(--border);
     box-shadow: 4px 4px var(--shadow-color);
 }
@@ -266,34 +264,27 @@ body.dark-mode .resume {
     background: var(--backgroud-color);
 }
 
-.resume h1, .resume h2 {
+.card h1, .card h2 {
     display: inline-block;
     border: var(--border);
     background: #ffd966;
-    font-family: "Lexend Mega", sans-serif;
     font-weight: 300;
     font-size: 1.5em;
     padding: 5px 15px;
     margin: 10px 0;
 }
 
-body.dark-mode h1 {
-    color: var(--backgroud-color);
-    border-color: var(--shadow-color);
-}
-
-body.dark-mode h2 {
-    color: var(--backgroud-color);
-    border-color: #ffe599;
-}
-
-.resume h2 {
+.card h2 {
     background: #ffe599;
     font-size: 1em;
 }
 
-.resume p {
-    font-family: "Lexend Mega", sans-serif;
+body.dark-mode .card h1, body.dark-mode .card h2 {
+    color: var(--backgroud-color);
+    border-color: var(--backgroud-color);
+}
+
+.card p {
     font-weight: 300;
     font-size: 1em;
 }
@@ -318,7 +309,6 @@ body.dark-mode .recent {
     background-color: white;
     border: var(--border);
     border-radius: 5px;
-    margin: 0px;
     padding: 30px;
     text-align: left;
     box-shadow: 4px 4px;
@@ -398,4 +388,99 @@ body.dark-mode .polaroid {
     max-width: 200px;
     line-height: 0.9;
     color: black;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main-container {
+        max-width: 95%;
+        padding: 0 10px 50px 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: auto;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 95%;
+    }
+
+    header ul {
+        width: 100%;
+        align-items: center;
+        gap: 2em;
+        padding: 3em 0 0 0;
+        font-size: 8px;
+        margin: 0;
+    }
+
+    header a, .switch {
+        font-size: 1rem;
+        padding-right: 0;
+    }
+
+    .xylophone {
+        align-items: center;
+        padding-left: 0;
+        width: 100%;
+        gap: 1em;
+    }
+
+    .key {
+        width: 100%;
+        height: 75px;
+        border-radius: 10px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .content-row {
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .card {
+        width: 100%;
+        margin: 40px 0 0 0;
+    }
+
+    .profile-photo {
+        padding-top: 230px;
+    }
+
+    .blog-list {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .blog-item {
+        width: 100%;
+        align-content: center;
+    }
+
+    .blog-item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .resume {
+        padding: 30px;
+    }
+
+
 }
