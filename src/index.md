@@ -6,7 +6,7 @@ title: 'Home'
 welcome:
     name: 'Radek Dobrovolný'
     title: 'Software Developer and Forest Keeper'
-    desc: 'I like to get involved in projects that make life or work easier. Or just for fun. I like projects to have a beginning and an end. Small and local is beautiful.'
+    desc: 'I like getting involved in projects that make life or work easier. Or just for fun. I like projects to have a beginning and an end. Small and local is beautiful.'
     greetings: 'Dobrý den'
     profile: 'assets/images/profile-bw-trans.png'
 ---
