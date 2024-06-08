@@ -42,15 +42,12 @@ jobs:
         run: |
           npm ci
           npm run github-build
-
-      - name: Remove symlinks and hardlinks
-        run: |
-          find ./_site -type l -exec rm -f {} \;
           
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
+          path: '/_site/'
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
