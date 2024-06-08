@@ -14,8 +14,8 @@
             <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
             {%- endfor -%}
             <li>
-                <button class="switch" id="switch"><img src="/assets/images/ice-cream.png" class="ice-cream"><img
-                        src="/assets/images/spruce.png" class="spruce"></button>
+                <button class="switch" id="switch"><img src="{{ '/assets/images/ice-cream.png' | url }}" class="ice-cream"><img
+                        src="{{ '/assets/images/spruce.png' | url}}" class="spruce"></button>
             </li>
         </ul>
     </nav>
