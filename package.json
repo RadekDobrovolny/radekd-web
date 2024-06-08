@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "eleventy --port 16161 --serve"
+    "start": "eleventy --port 16161 --serve",
+    "github-build": "env NODE_ENV=production npx eleventy --pathprefix 'radek-web'"
   },
   "keywords": [],
   "author": "",
