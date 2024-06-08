@@ -2,6 +2,7 @@
 tags: page
 layout: landing.njk
 title: 'Home'
+permalink: 'index.html'
 
 welcome:
     name: 'Radek Dobrovolný'

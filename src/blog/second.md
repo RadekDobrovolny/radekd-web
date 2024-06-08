@@ -1,6 +1,6 @@
 ---
 title: Second Post
-layout: base
+layout: blog
 tags: post
 desc: 'Thanks for all the fish.'
 ---

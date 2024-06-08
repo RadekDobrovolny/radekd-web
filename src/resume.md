@@ -2,6 +2,7 @@
 layout: resume
 title: "Resumé"
 tags: page
+permalink: 'resume.html'
 ---
 
 # programming
