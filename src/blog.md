@@ -2,7 +2,6 @@
 layout: blogs
 title: Blog
 tags: page
-permalink: 'blog.html'
 ---
 
 {% for post in collections.post %}
