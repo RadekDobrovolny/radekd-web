@@ -266,7 +266,6 @@ body.dark-mode .resume {
 
 .card h1, .card h2 {
     display: inline-block;
-    border: var(--border);
     background: #ffd966;
     font-weight: 300;
     font-size: 1.5em;
@@ -281,7 +280,6 @@ body.dark-mode .resume {
 
 body.dark-mode .card h1, body.dark-mode .card h2 {
     color: var(--backgroud-color);
-    border-color: var(--backgroud-color);
 }
 
 .card p {
