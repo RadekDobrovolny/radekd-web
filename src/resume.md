@@ -2,7 +2,6 @@
 layout: resume
 title: "Resumé"
 tags: page
-permalink: '/resume/'
 
 date: 2024-06-02
 ---
