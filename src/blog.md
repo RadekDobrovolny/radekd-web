@@ -2,14 +2,10 @@
 layout: blogs
 title: Blog
 tags: page
+
+date: 2024-06-03
 ---
 
 {% for post in collections.post %}
-<a href="{{ post.url | url }}">
-<div class="blog-item">
-    <img src="{{ post.data.img | url }}">
-    <h3>{{ post.data.title }}</h3>
-    <p>{{ post.data.desc }}</p>
-</div>
-</a>
+{% include "partials/_item-list.njk" %}
 {% endfor %}

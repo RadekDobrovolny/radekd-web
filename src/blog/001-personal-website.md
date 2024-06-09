@@ -8,4 +8,4 @@ date: 2024-06-09
 img: '/assets/images/blog/ice-cream.jpg'
 ---
 
-# Second Post
+# Personal Website

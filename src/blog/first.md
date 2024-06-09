@@ -1,7 +1,7 @@
 ---
 title: First Post
 layout: blog
-tags: post
+tags: draft-post
 desc: 'Dolor sit amet'
 
 img: 'https://placehold.co/200x200'

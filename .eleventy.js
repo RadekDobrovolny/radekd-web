@@ -8,6 +8,12 @@ module.exports = function (eleventyConfig) {
         return `<div class="example-shortcode">Hello, ${name}!</div>`;
     });
 
+    const {DateTime} = require("luxon");
+
+    eleventyConfig.addFilter("postDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+    });
+
     return {
         dir: {
             input: "src",

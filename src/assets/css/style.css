@@ -342,6 +342,11 @@ body.dark-mode .blog-item img {
     line-height: 1.4;
 }
 
+.blog-item .date {
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
 .polaroid {
     display: inline-block;
     background: white;

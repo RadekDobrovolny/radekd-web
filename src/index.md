@@ -2,6 +2,7 @@
 tags: page
 layout: landing.njk
 title: 'Home'
+date: 2024-06-01
 
 welcome:
     name: 'Radek Dobrovolný'
@@ -12,11 +13,5 @@ welcome:
 ---
 
 {% for post in collections.post %}
-<a href="{{ post.url }}">
-<div class="blog-item">
-    <img src="{{ post.data.img | url }}">
-    <h3>{{ post.data.title }}</h3>
-    <p>{{ post.data.desc }}</p>
-</div>
-</a>
+{% include "partials/_item-list.njk" %}
 {% endfor %}

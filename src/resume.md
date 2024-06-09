@@ -2,6 +2,8 @@
 layout: resume
 title: "Resumé"
 tags: page
+
+date: 2024-06-02
 ---
 
 # programming
@@ -26,7 +28,7 @@ asyncio, turtle
 
 __style:__ flake8, isort, black, pylint
 
-__to learn list:__ celery
+__to learn list:__ metaclasses, celery
 
 ## django
 
