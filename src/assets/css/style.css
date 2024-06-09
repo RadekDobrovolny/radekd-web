@@ -15,16 +15,6 @@
     background: white;
 }
 
-body.dark-mode {
-    --text-color: #F6F7F8;
-    --shadow-color: #ffd966;
-    --border: 3px solid var(--shadow-color);
-    --thic-shadow: 8px 8px var(--shadow-color);
-    --backgroud-color: #111827;
-    color: var(--text-color);
-    background: var(--backgroud-color);
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -34,6 +24,16 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
+}
+
+body.dark-mode {
+    --text-color: #F6F7F8;
+    --shadow-color: #ffd966;
+    --border: 3px solid var(--shadow-color);
+    --thic-shadow: 8px 8px var(--shadow-color);
+    --backgroud-color: #111827;
+    color: var(--text-color);
+    background: var(--backgroud-color);
 }
 
 .main-container {
@@ -270,7 +270,7 @@ body.dark-mode .resume {
     font-weight: 300;
     font-size: 1.5em;
     padding: 5px 15px;
-    margin: 10px 0;
+    margin: 40px 0 5px 0;
 }
 
 .card h2 {
@@ -393,9 +393,10 @@ body.dark-mode .polaroid {
     color: black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1090px) {
     body {
         font-size: 14px;
+        min-width: 370px;
     }
 
     .main-container {
