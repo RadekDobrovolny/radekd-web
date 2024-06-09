@@ -5,7 +5,7 @@ tags: page
 ---
 
 {% for post in collections.post %}
-<a href="{{ post.url }}">
+<a href="{{ post.url | url }}">
 <div class="blog-item">
     <img src="{{ post.data.img | url }}">
     <h3>{{ post.data.title }}</h3>
