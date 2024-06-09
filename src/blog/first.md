@@ -3,6 +3,8 @@ title: First Post
 layout: blog
 tags: post
 desc: 'Dolor sit amet'
+
+img: 'https://placehold.co/200x200'
 ---
 
 # Suspendisse aliquam

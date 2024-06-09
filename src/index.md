@@ -14,7 +14,7 @@ welcome:
 {% for post in collections.post %}
 <a href="{{ post.url }}">
 <div class="blog-item">
-    <img src="https://placehold.co/200x200">
+    <img src="{{ post.data.img | url }}">
     <h3>{{ post.data.title }}</h3>
     <p>{{ post.data.desc }}</p>
 </div>
