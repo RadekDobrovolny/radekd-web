@@ -2,6 +2,7 @@
 layout: blogs
 title: Blog
 tags: page
+permalink: '/blog.html'
 
 date: 2024-06-03
 ---
