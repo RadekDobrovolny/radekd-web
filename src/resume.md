@@ -36,7 +36,7 @@ sqlalchemy, asyncio, turtle, reportlab
 
 __style:__ flake8, isort, black, pylint
 
-__to learn list:__ metaclasses, celery
+__to learn list:__ metaclasses, celery, ruff
 
 ## django
 
@@ -49,7 +49,7 @@ __to learn list:__ middleware, django REST framework, signals
 
 ## git
 
-__commands:__ clone, pull, push, commit, rebase, branch, merge,
+__commands:__ init, clone, pull, push, commit, rebase, branch, merge,
 checkout, stash, log, diff, remote, squash
 
 __storage:__ GitHub, Gitlab, bitbucket
