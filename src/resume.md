@@ -6,6 +6,8 @@ tags: page
 date: 2024-06-02
 ---
 
+# resumé
+
 You can explore my complete job history on LinkedIn.
 
 <a href="https://www.linkedin.com/in/radekdobrovolny/" target=”_blank”>www.linkedin.com/in/radekdobrovolny</a>
@@ -62,7 +64,7 @@ Functions, arrays, objects, conditionals, loops, DOM manipulation, event handlin
 
 I've written several short scripts that work with the DOM on web pages.
 
-I also have some experience with p5.js.
+__libs:__ jQuery, Swiper, p5
 
 __to learn list:__ ES6+ features, single page apps frameworks
 

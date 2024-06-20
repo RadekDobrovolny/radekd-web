@@ -49,25 +49,28 @@ body.dark-mode header {
 }
 
 header {
-    background: white;
     max-width: 1200px;
-    min-height: 95px;
     margin: auto;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    max-width: 1200px;
     justify-content: space-between;
-    align-items: center;
+    align-items: normal;
 }
 
 header nav {
     display: flex;
     align-items: center;
+    padding: 10px 0;
 }
 
 header ul {
     display: flex;
     align-items: center;
     list-style: none;
-    margin-left: 2em;
+    margin-left: 1.4em;
 }
 
 header a, .switch {
@@ -109,16 +112,17 @@ body.dark-mode .spruce {
 
 .xylophone {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding-left: 20px;
+    max-width: 1200px;
     margin-top: 0;
+    padding: 0 20px;
+    gap: 2%
 }
 
 .key {
-    width: 60px;
-    height: 95px;
-    margin-top: -40px;
+    flex: 1;
+    width: 108px;
+    height: 65px;
+    margin-top: -30px;
     border: var(--border);
     border-radius: 15px;
     box-shadow: 2px 3px black;
@@ -138,11 +142,14 @@ body.dark-mode main {
     background: var(--backgroud-color);
 }
 
-.content-row {
+section.content-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    gap: 40px;
+    justify-content: space-between;
+}
+
+section.first {
+    padding-top: 20px;
 }
 
 .card {
@@ -150,7 +157,7 @@ body.dark-mode main {
     box-shadow: var(--thic-shadow);
     border-radius: 10px;
     padding: 20px;
-    margin: 60px 20px 20px 20px;
+    margin: 40px 20px 20px 20px;
     text-align: left;
 }
 
@@ -189,7 +196,7 @@ body.dark-mode .welcome {
 }
 
 body.dark-mode .profile-photo {
-    background: #A52422;
+    background: #764134;
 }
 
 .profile-photo h3 {
@@ -241,7 +248,7 @@ body.dark-mode .tags {
 }
 
 body.dark-mode .tag {
-    background: #A52422;
+    background: #764134;
     border: var(--border);
     box-shadow: 4px 4px var(--shadow-color);
 }
@@ -393,7 +400,67 @@ body.dark-mode .polaroid {
     color: black;
 }
 
-@media (max-width: 1090px) {
+footer {
+    background: #ff69b4;
+}
+
+.footer-sign {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 50px;
+    gap: 80px;
+}
+
+.footer-card {
+    flex: 1;
+    font-size: 0.8rem;
+}
+
+footer .fa-brands, footer .fa-solid, footer .fa-regular, footer .bx  {
+    font-size: 2.5rem;
+}
+
+footer .footer-msg {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 30px;
+}
+
+
+
+@media (max-width: 1195px) {
+    header ul {
+        align-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+
+    header a, .switch {
+        font-size: 1.2rem;
+        padding-right: 0;
+    }
+
+    .content-row {
+        justify-content: center;
+    }
+
+    .card {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 775px) {
     body {
         font-size: 14px;
         min-width: 370px;
@@ -405,10 +472,7 @@ body.dark-mode .polaroid {
     }
 
     header {
-        flex-direction: column;
-        align-items: center;
         padding: 10px;
-        margin: auto;
     }
 
     header nav {
@@ -419,10 +483,9 @@ body.dark-mode .polaroid {
 
     header ul {
         width: 100%;
+        flex-wrap: wrap;
         align-items: center;
-        gap: 2em;
-        padding: 3em 0 0 0;
-        font-size: 8px;
+        gap: 1em;
         margin: 0;
     }
 
@@ -431,36 +494,40 @@ body.dark-mode .polaroid {
         padding-right: 0;
     }
 
+    button.switch img{
+        height: 35px;
+    }
+
     .xylophone {
         align-items: center;
-        padding-left: 0;
+        padding: 0;
         width: 100%;
-        gap: 1em;
+        gap: 2.5%;
     }
 
     .key {
-        width: 100%;
-        height: 75px;
-        border-radius: 10px;
-    }
-
-    .main {
-        width: 100%;
+        height: 65px;
+        box-shadow: 1px 2px black;
+        border-radius: 8px;
     }
 
     .main-container {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 20px;
     }
 
     .content-row {
         width: 100%;
         flex-direction: column;
-        gap: 0;
+        gap: 40px;
     }
 
     .card {
         width: 100%;
-        margin: 40px 0 0 0;
+        margin: 0;
     }
 
     .profile-photo {
@@ -485,6 +552,4 @@ body.dark-mode .polaroid {
     .resume {
         padding: 30px;
     }
-
-
 }

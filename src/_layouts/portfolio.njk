@@ -1,0 +1,16 @@
+{% include "partials/_head.njk" %}
+<body>
+{% include "partials/_navigation.njk" %}
+<main>
+    <div class="main-container">
+        <section class="content-row">
+            <div class="card recent">
+                <h3>Portfolio</h3>
+                <div class="blog-list">
+                    {{ content | safe }}
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% include "partials/_footer.njk" %}

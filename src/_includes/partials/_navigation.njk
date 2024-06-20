@@ -7,16 +7,20 @@
         <button data-note="G" class="key" style="background-color: #ffd966;"></button>
         <button data-note="A" class="key" style="background-color: #ffdf80;"></button>
         <button data-note="B" class="key" style="background-color: #ffe599;"></button>
+        <button data-note="C2" class="key" style="background-color: #ffecb3;"></button>
     </div>
-    <nav>
-        <ul>
-            {%- for item in collections.page -%}
-            <li><a href="{{ item.url | url }}">{{ item.data.title }}</a></li>
-            {%- endfor -%}
-            <li>
-                <button class="switch" id="switch"><img src="{{ '/assets/images/ice-cream.png' | url }}" class="ice-cream"><img
-                        src="{{ '/assets/images/spruce.png' | url }}" class="spruce"></button>
-            </li>
-        </ul>
-    </nav>
+    <div class="menu">
+        <nav>
+            <ul>
+                {%- for item in collections.page -%}
+                <li><a href="{{ item.url | url }}">{{ item.data.title }}</a></li>
+                {%- endfor -%}
+                <li>
+                    <button class="switch" id="switch"><img src="{{ '/assets/images/ice-cream.png' | url }}"
+                                                            class="ice-cream"><img
+                            src="{{ '/assets/images/spruce.png' | url }}" class="spruce"></button>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
