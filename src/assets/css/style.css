@@ -404,6 +404,11 @@ footer {
     background: #ff69b4;
 }
 
+body.dark-mode footer {
+    background: var(--backgroud-color);
+    color: #ffd966;
+}
+
 .footer-sign {
     display: flex;
     justify-content: center;
