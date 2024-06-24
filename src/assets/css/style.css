@@ -431,17 +431,24 @@ body.dark-mode footer {
     font-size: 0.8rem;
 }
 
-footer .fa-brands, footer .fa-solid, footer .fa-regular, footer .bx  {
-    font-size: 2.5rem;
-}
-
 footer .footer-msg {
     display: flex;
     gap: 15px;
     padding-bottom: 30px;
 }
 
+footer a {
+    color: #fff;
+}
 
+footer .bx  {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+body.dark-mode .bx {
+    color: #ffd966;
+}
 
 @media (max-width: 1195px) {
     header ul {
@@ -461,6 +468,17 @@ footer .footer-msg {
 
     .card {
         width: 70%;
+    }
+
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-card {
+        min-width: 300px;
+        margin: 0;
     }
 
 }
