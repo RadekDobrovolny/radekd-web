@@ -1,7 +1,9 @@
 ---
 title: First Post
-layout: blog
-tags: post
+layout: post
+tags: 
+  - post
+  - mock
 desc: 'Dolor sit amet'
 permalink: '/blog/test.html'
 

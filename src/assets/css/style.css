@@ -354,6 +354,25 @@ body.dark-mode .blog-item img {
     font-size: 0.8em;
 }
 
+.item-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.item-tag {
+    background: #DAF5F0;
+    color: black;
+    padding: 6px 8px;
+    font-size: 0.8em;
+    font-weight: 500;
+    border: 3px solid black;
+}
+
+body.dark-mode .item-tag {
+    background: #ffe599;
+}
+
 .polaroid {
     display: inline-block;
     background: white;
@@ -441,7 +460,7 @@ footer a {
     color: #fff;
 }
 
-footer .bx  {
+footer .bx {
     font-size: 2.5rem;
     color: #000;
 }
@@ -517,7 +536,7 @@ body.dark-mode .bx {
         padding-right: 0;
     }
 
-    button.switch img{
+    button.switch img {
         height: 35px;
     }
 
@@ -574,5 +593,22 @@ body.dark-mode .bx {
 
     .resume {
         padding: 30px;
+    }
+
+    .polaroid {
+        transform: none;
+        transition: none;
+    }
+
+    .polaroid.left {
+        margin: 20px auto 30px auto;
+        shape-outside: none;
+    }
+
+    .polaroid.right {
+        margin: 20px auto 30px auto;
+        transform: none;
+        shape-outside: none;
+        float: none;
     }
 }

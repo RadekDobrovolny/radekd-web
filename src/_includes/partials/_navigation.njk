@@ -12,9 +12,10 @@
     <div class="menu">
         <nav>
             <ul>
-                {%- for item in collections.page -%}
-                <li><a href="{{ item.url | url }}">{{ item.data.title }}</a></li>
-                {%- endfor -%}
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/resume/index.html">Resumé</a></li>
+                <li><a href="/portfolio/index.html">Portfolio</a></li>
+                <li><a href="/blog/index.html">Blog</a></li>
                 <li>
                     <button class="switch" id="switch"><img src="{{ '/assets/images/ice-cream.png' | url }}"
                                                             class="ice-cream"><img

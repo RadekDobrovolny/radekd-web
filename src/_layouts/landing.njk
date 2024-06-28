@@ -20,21 +20,16 @@
             <div class="card tags">
                 <h3>Interests</h3>
                 <div class="tag-list">
-                    <a href="#" class="tag">python</a>
-                    <a href="#" class="tag">django</a>
-                    <a href="#" class="tag">web</a>
-                    <a href="#" class="tag">aws</a>
-                    <a href="#" class="tag">teaching</a>
-                    <a href="#" class="tag">design</a>
-                    <a href="#" class="tag">forest</a>
-                    <a href="#" class="tag">fun</a>
+                    {% for category in collections.categories %}
+                        <a href="/{{ category }}/index.html" class="tag">{{ category }}</a>
+                    {% endfor %}
                 </div>
             </div>
         </section>
 
         <section class="content-row">
             <div class="card recent">
-                <h3>Recent blogs</h3>
+                <h3>Recent posts</h3>
                 <div class="blog-list">
                     {{ content | safe }}
                 </div>
