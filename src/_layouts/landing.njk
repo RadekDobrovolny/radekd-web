@@ -21,7 +21,9 @@
                 <h3>Interests</h3>
                 <div class="tag-list">
                     {% for category in collections.categories %}
+                        {% if category != "post" and category != "portfolio" %}
                         <a href="{{ ('/' + category + '/index.html') | url }}" class="tag">{{ category }}</a>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
