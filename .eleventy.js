@@ -4,10 +4,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/assets/sounds");
 
-    eleventyConfig.addShortcode("exampleShortcode", function (name) {
-        return `<div class="example-shortcode">Hello, ${name}!</div>`;
-    });
-
     eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 
 	function extractExcerpt(post) {
