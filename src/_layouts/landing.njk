@@ -21,7 +21,7 @@
                 <h3>Interests</h3>
                 <div class="tag-list">
                     {% for category in collections.categories %}
-                        <a href="{{ '/{{ category }}/index.html' | url }}" class="tag">{{ category }}</a>
+                        <a href="{{ '/{{ category | slugify }}/index.html' | url }}" class="tag">{{ category }}</a>
                     {% endfor %}
                 </div>
             </div>

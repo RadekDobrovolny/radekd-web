@@ -5,6 +5,7 @@ pagination:
   alias: category
 permalink: "/{{ category | slugify }}/index.html"
 layout: posts
+title: "Posts"
 ---
 
 {% assign posts = collections.post | filterByCategory: category %}
