@@ -7,7 +7,7 @@ tags:
   - web
 desc: 'The decision and the way I built this website'
 date: 2024-06-09
-permalink: '/blog/personal-website.html'
+permalink: '/post/personal-website.html'
 
 img: '/assets/images/posts/ice-cream.jpg'
 ---

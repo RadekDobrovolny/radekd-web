@@ -12,6 +12,6 @@ welcome:
     profile: 'assets/images/profile-bw-trans.png'
 ---
 
-{% for post in collections.post %}
+{% for post in collections.post reversed %}
 {% include "partials/_item-list.njk" %}
 {% endfor %}
