@@ -332,6 +332,7 @@ body.dark-mode .blog-item {
     display: block;
     height: 250px;
     width: 250px;
+    object-fit: cover;
     margin: 0 auto 20px auto; /* Center the image and add bottom margin */
     border: var(--border);
 }

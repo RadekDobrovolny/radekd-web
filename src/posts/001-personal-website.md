@@ -9,7 +9,7 @@ desc: 'The decision and the way I built this website'
 date: 2024-06-09
 permalink: '/blog/personal-website.html'
 
-img: '/assets/images/blog/ice-cream.jpg'
+img: '/assets/images/posts/ice-cream.jpg'
 ---
 
 # Personal Website
