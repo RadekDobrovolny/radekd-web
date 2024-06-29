@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "eleventy --port 16161 --serve",
-    "github-build": "env NODE_ENV=production npx eleventy --pathprefix 'radekd-web'"
+    "github-build": "env NODE_ENV=production npx eleventy --pathprefix 'radekd-web'",
+    "hippou-cz-build": "env NODE_ENV=production npx eleventy"
   },
   "keywords": [],
   "author": "",

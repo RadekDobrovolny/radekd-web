@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          npm run github-build
+          npm run hippou-cz-build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
