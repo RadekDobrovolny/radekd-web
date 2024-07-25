@@ -330,6 +330,7 @@ body.dark-mode .blog-item {
 
 .blog-item img {
     display: block;
+    background: #daf5f0;
     height: 250px;
     width: 250px;
     object-fit: cover;
@@ -339,6 +340,7 @@ body.dark-mode .blog-item {
 
 body.dark-mode .blog-item img {
     border: 3px solid var(--backgroud-color);
+    background: #ffe599;
 }
 
 .blog-item h3 {
