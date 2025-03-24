@@ -14,6 +14,8 @@ permalink: '/post/prekracovani-hranic.html'
 img: '/assets/images/posts/konev.png'
 ---
 
+<p>{{ date | postDate }}</p>
+
 # Digitální artefakt: workshop na Zimní škole KISKu
 
 *Na Zimní škole KISKu jsem vedl workshop, ve kterém jsme se pokusili vytvořit společný digitální artefakt – vzpomínku, co přežije fyzický čas i prostor. Povedlo se? A co všechno se dělo během jedné intenzivní hodiny a půl v Nové Cvernovce?*
