@@ -33,12 +33,12 @@ fixtures, decorators
 __libs:__ datetime, unittest, pytest, os, sys, dataclasses, abc,
 itertools, functools, json, re, logging, pathlib, csv, math
 
-__complex libs:__ flask, requests, pandas, numpy, pygame, pillow,
+__complex libs:__ flask, fastapi, requests, pandas, numpy, pygame, pillow,
 sqlalchemy, asyncio, turtle, reportlab
 
-__style:__ flake8, isort, black, pylint
+__style:__ ruff, isort, black, pylint, flake8
 
-__to learn list:__ metaclasses, celery, ruff
+__to learn list:__ metaclasses, celery
 
 ## django
 

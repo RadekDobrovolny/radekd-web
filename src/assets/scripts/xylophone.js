@@ -1,8 +1,17 @@
+const audioElements = {};
+
+Object.entries(notes).forEach(([note, url]) => {
+  const audio = new Audio(url);
+  audio.preload = 'auto';
+  audio.load();
+  audioElements[note] = audio;
+});
+
 document.querySelectorAll('.key').forEach(key => {
     key.addEventListener('click', () => {
-        const note = key.getAttribute('data-note');
-        const audio = new Audio(notes[note]);
-        audio.play();
+      const note = key.getAttribute('data-note');
+      audioElements[note].currentTime = 0;
+      audioElements[note].play();
     });
 });
 

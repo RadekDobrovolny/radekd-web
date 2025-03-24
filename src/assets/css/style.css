@@ -336,6 +336,7 @@ body.dark-mode .blog-item {
     object-fit: cover;
     margin: 0 auto 20px auto; /* Center the image and add bottom margin */
     border: var(--border);
+    /* filter: grayscale(80%) sepia(15%); */
 }
 
 body.dark-mode .blog-item img {
