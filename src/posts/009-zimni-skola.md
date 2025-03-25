@@ -29,7 +29,7 @@ V polovině února 2025 jsem byl na akci pořádané studenty KISKu – první Z
     <span>hlavní sál</span>
 </div>
 
-Akce se konala v Bratislavě, v kulturním centru Nová Cvernovka. Měl jsem velkou chuť nasát atmosféru tohohle prostředí, udělat si výlet, poznat nové lidi a nahlédnout do současné nálady a témat studentů. A nakonec to bylo moc prima.
+Akce se konala v Bratislavě, v kreativním a kulturním centru [Nová Cvernovka](https://novacvernovka.eu/). Měl jsem velkou chuť nasát atmosféru tohohle prostředí, udělat si výlet, poznat nové lidi a nahlédnout do současné nálady a témat studentů. A nakonec to bylo moc prima.
 
 Při registraci bylo potřeba rovnou říct, čím chcete do programu přispět. Na výběr byly přednášky, workshopy a další podobné formáty. Napsal jsem trochu obecnou odpověď, protože jsem netušil, jaké budou vstupní podmínky – hlavně čas a počet lidí. Nakonec jsme se dohodli, že udělám workshop. Konkrétně: pokusíme se společně vytvořit digitální artefakt.
 
@@ -37,16 +37,16 @@ Nakonec jsme se domluvili na poměrně vražedných parametrech. Časová dotace
 
 ## Téma a ukotvení
 
-Hodně se mi líbil claim celé akce: překračování hranic. Mým cílem bylo během workshopu vytvořit nějaké digitální dílo – vzpomínku na tuto akci – na kterém se budou podílet všichni účastníci.
+Hodně se mi líbil claim celé akce: *překračování hranic*. Mým cílem bylo během workshopu vytvořit nějaké digitální dílo – vzpomínku na tuto akci – na kterém se budou podílet všichni účastníci.
 
 <div class="polaroid right">
-    <img src="/assets/images/posts/zs-prezijeme.jpg" alt="Přežijeme?">
-    <span>Artefakt</span>
+    <img src="/assets/images/posts/zs-prezijeme.jpg" alt="Fyzický artefakt">
+    <span>Fyzický artefakt</span>
 </div>
 
 Nejdřív ale trochu teorie. Snažil jsem se na úvod představit, co to vlastně digitální artefakty jsou, a ukázat pár příkladů. Mluvili jsme o tom, že se pohybujeme na pomezí digitální tvorby, umění, programování a generativního umění – a že hranice mezi těmito oblastmi jsou často dost rozmazané. Nechtěl jsem zabřednout do debat, jestli se jedná o umění, nebo ne. To pro mě v ten moment nebylo důležité. Vnímám digitální artefakty jako nástroj sebevyjádření.
 
-Zmínil jsem projekt Genuary, web Another Useless Web a představil některé tvůrce na Instagramu. Na teoretický úvod jsme měli asi 15 minut – snažil jsem se toho předat co nejvíc, ale v tomhle čase to možná působilo trochu krkolomně.
+Zmínil jsem výzvu [Genuary](https://genuary.art), agregátor [The Useless Web](https://theuselessweb.com/) a představil některé tvůrce na Instagramu. Na teoretický úvod jsme měli asi 15 minut – snažil jsem se toho předat co nejvíc, ale v tomhle čase to možná působilo trochu krkolomně.
 
 ## Role a rozdělení
 
@@ -97,7 +97,7 @@ Pak už jsem jen dolaďoval zobrazení na mobilních telefonech a opravil přehr
 
 ## Uvařeno
 
-Výsledek jsem nahrál do repozitáře na GitHubu, kde zároveň používám GitHub Pages pro hosting. Digitální artefakt si můžete prohlédnout zde: [radekdobrovolny.github.io/zimni_skola_2025](https://radekdobrovolny.github.io/zimni_skola_2025/).
+Výsledek jsem nahrál do [repozitáře na GitHubu](https://github.com/RadekDobrovolny/zimni_skola_2025), kde zároveň používám GitHub Pages pro hosting. Digitální artefakt si můžete prohlédnout zde: [radekdobrovolny.github.io/zimni_skola_2025](https://radekdobrovolny.github.io/zimni_skola_2025/).
 
 Měl jsem radost, že se cíl workshopu podařilo naplnit. Že každý přispěl svým dílem do společného, komunitního výsledku. A teď se uvidí – jestli se k tomu artefaktu někdo za pár let vrátí, nebo upadne v zapomnění.
 
