@@ -83,7 +83,7 @@ header a, .switch {
 
 body.dark-mode a {
     color: #ffd966;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .switch {
@@ -215,7 +215,7 @@ body.dark-mode .profile-photo {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .tags {
@@ -293,6 +293,14 @@ body.dark-mode .card h1, body.dark-mode .card h2 {
 .card p {
     font-weight: 300;
     font-size: 1em;
+}
+
+.resume a {
+    text-decoration: underline;
+}
+
+body.dark-mode .resume a {
+    text-decoration: underline;
 }
 
 body.dark-mode .recent {
