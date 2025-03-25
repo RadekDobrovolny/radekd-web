@@ -82,7 +82,8 @@ header a, .switch {
 }
 
 body.dark-mode a {
-    color: var(--text-color);
+    color: #ffd966;
+    text-decoration: underline;
 }
 
 .switch {
@@ -214,7 +215,7 @@ body.dark-mode .profile-photo {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .tags {
