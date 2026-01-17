@@ -31,9 +31,9 @@ body.dark-mode {
     --shadow-color: #ffd966;
     --border: 3px solid var(--shadow-color);
     --thic-shadow: 8px 8px var(--shadow-color);
-    --backgroud-color: #111827;
+    --background-color: #111827;
     color: var(--text-color);
-    background: var(--backgroud-color);
+    background: var(--background-color);
 }
 
 .main-container {
@@ -44,7 +44,7 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background: var(--backgroud-color);
+    background: var(--background-color);
     color: white;
 }
 
@@ -55,7 +55,6 @@ header {
     flex-direction: column;
     gap: 10px;
     background: white;
-    max-width: 1200px;
     justify-content: space-between;
     align-items: normal;
 }
@@ -140,7 +139,7 @@ main {
 }
 
 body.dark-mode main {
-    background: var(--backgroud-color);
+    background: var(--background-color);
 }
 
 section.content-row {
@@ -269,7 +268,7 @@ body.dark-mode .tag {
 }
 
 body.dark-mode .resume {
-    background: var(--backgroud-color);
+    background: var(--background-color);
 }
 
 .card h1, .card h2 {
@@ -287,7 +286,7 @@ body.dark-mode .resume {
 }
 
 body.dark-mode .card h1, body.dark-mode .card h2 {
-    color: var(--backgroud-color);
+    color: var(--background-color);
 }
 
 .card p {
@@ -304,7 +303,7 @@ body.dark-mode .resume a {
 }
 
 body.dark-mode .recent {
-    background: var(--backgroud-color);
+    background: var(--background-color);
 }
 
 .blog-list {
@@ -332,7 +331,7 @@ body.dark-mode .recent {
 
 body.dark-mode .blog-item {
     background-color: white;
-    border: 3px solid var(--backgroud-color);
+    border: 3px solid var(--background-color);
     box-shadow: 3px 4px var(--shadow-color);
     color: black;
 }
@@ -349,7 +348,7 @@ body.dark-mode .blog-item {
 }
 
 body.dark-mode .blog-item img {
-    border: 3px solid var(--backgroud-color);
+    border: 3px solid var(--background-color);
     background: #ffe599;
 }
 
@@ -437,7 +436,7 @@ footer {
 }
 
 body.dark-mode footer {
-    background: var(--backgroud-color);
+    background: var(--background-color);
     color: #ffd966;
 }
 
