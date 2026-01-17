@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 16.x ]
+        node-version: [ 20.x ]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,14 +37,20 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build with Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-      - name: Install dependencies & build
-        run: |
-          npm ci
-          npm run hippou-cz-build
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint --if-present
+        continue-on-error: true
+
+      - name: Build
+        run: npm run hippou-cz-build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
