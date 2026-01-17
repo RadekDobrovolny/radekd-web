@@ -215,8 +215,9 @@ body.dark-mode .profile-photo {
 
 a {
     text-decoration: none;
-    word-wrap: break-word;
     overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
 }
 
 .tags {
