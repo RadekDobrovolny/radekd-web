@@ -1,8 +1,12 @@
 module.exports = function (eleventyConfig) {
+    const pluginRss = require("@11ty/eleventy-plugin-rss");
+    eleventyConfig.addPlugin(pluginRss);
+
     eleventyConfig.addPassthroughCopy("src/assets/css");
     eleventyConfig.addPassthroughCopy("src/assets/scripts");
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/assets/sounds");
+    eleventyConfig.addPassthroughCopy("src/robots.txt");
 
     eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 
