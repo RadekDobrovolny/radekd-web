@@ -24,10 +24,7 @@ img: '/assets/images/posts/konev.png'
 
 V polovině února 2025 jsem byl na akci pořádané studenty KISKu – první Zimní škole, komunitní události, kterou kompletně realizovali studenti a obsah přinášeli sami účastníci. 
 
-<div class="polaroid left">
-    <img src="/assets/images/posts/zs-prostor.jpg" alt="Hlavní sál">
-    <span>hlavní sál</span>
-</div>
+{% polaroid "left", "/assets/images/posts/zs-prostor.jpg", "hlavní sál" %}
 
 Akce se konala v Bratislavě, v kreativním a kulturním centru [Nová Cvernovka](https://novacvernovka.eu/). Měl jsem velkou chuť nasát atmosféru tohohle prostředí, udělat si výlet, poznat nové lidi a nahlédnout do současné nálady a témat studentů. A nakonec to bylo moc prima.
 
@@ -39,10 +36,7 @@ Nakonec jsme se domluvili na poměrně vražedných parametrech. Časová dotace
 
 Hodně se mi líbil claim celé akce: *překračování hranic*. Mým cílem bylo během workshopu vytvořit nějaké digitální dílo – vzpomínku na tuto akci – na kterém se budou podílet všichni účastníci.
 
-<div class="polaroid right">
-    <img src="/assets/images/posts/zs-prezijeme.jpg" alt="Fyzický artefakt">
-    <span>Fyzický artefakt</span>
-</div>
+{% polaroid "right", "/assets/images/posts/zs-prezijeme.jpg", "Fyzický artefakt" %}
 
 Nejdřív ale trochu teorie. Snažil jsem se na úvod představit, co to vlastně digitální artefakty jsou, a ukázat pár příkladů. Mluvili jsme o tom, že se pohybujeme na pomezí digitální tvorby, umění, programování a generativního umění – a že hranice mezi těmito oblastmi jsou často dost rozmazané. Nechtěl jsem zabřednout do debat, jestli se jedná o umění, nebo ne. To pro mě v ten moment nebylo důležité. Vnímám digitální artefakty jako nástroj sebevyjádření.
 
@@ -52,10 +46,7 @@ Zmínil jsem výzvu [Genuary](https://genuary.art), agregátor [The Useless Web]
 
 Pak už jsem představil, co bychom se mohli pokusit vytvořit my. Chtěl jsem pracovat s knihovnou p5.js, kterou jsem velmi stručně představil: máme plátno, na kterém můžeme tvořit, a výstup pak umístit na web. Cílem bylo pokusit se vyjádřit atmosféru zimní školy a uchovat ji v digitálním světě – něco, co třeba i za pět let vyvolá nějaký pocit.
 
-<div class="polaroid left">
-    <img src="/assets/images/posts/zs-rajcata.jpg" alt="Zelenina">
-    <span>zelenina</span>
-</div>
+{% polaroid "left", "/assets/images/posts/zs-rajcata.jpg", "zelenina" %}
 
 Měl jsem připravené malé podskupinky, do kterých se účastníci rozdělili.
 
@@ -69,10 +60,7 @@ Předposlední skupina měla na starost vizuální styl – fonty, barvy, grafic
 
 Poslední skupinka byli interakční designéři – jejich úkolem bylo vymyslet, jak se bude stránka chovat, co se bude zobrazovat, jak bude vypadat interakce.
 
-<div class="polaroid right">
-    <img src="/assets/images/posts/zs-koule.jpg" alt="Disco">
-    <span>Disco</span>
-</div>
+{% polaroid "right", "/assets/images/posts/zs-koule.jpg", "Disco" %}
 
 Účastníci si sami vybrali skupinku a vyrazili sbírat. Na sběr dat jsme měli asi půl hodiny. Já si přisedl ke skupince designerů a pomáhal určovat hranice mezi tím, co jsme schopni realizovat, a co už by bylo příliš náročné.
 
@@ -88,10 +76,7 @@ V téhle fázi jsme ještě doladili plán interakce a celkový koncept. A tím 
 
 Já si pak všechny materiály posbíral a šlo se na večeři. A večer jsem se pustil do realizace. Měl jsem připravenou webovou šablonu s p5.js canvasem. Vložil jsem pozadí, vytvořil panel pro zobrazování textů, napsal funkci na náhodný výběr a zobrazení. Přidal jsem pohyb obrázků. Měl jsem trochu strach z té „fluidní hranice“ uprostřed obrazovky. Hojně jsem využíval ChatGPT pro generování kódu a já ho pak skládal dohromady jako puzzle a ladil detaily. Nakonec jsem přidal zvuky a dotykovou interakci. Asi za hodinu a půl byl výsledek hotový – a mohl jsem ho prezentovat ostatním.
 
-<div class="polaroid left">
-    <img src="/assets/images/posts/zs-valentin.jpg" alt="Valentín">
-    <span>Valentín</span>
-</div>
+{% polaroid "left", "/assets/images/posts/zs-valentin.jpg", "Valentín" %}
 
 Pak už jsem jen dolaďoval zobrazení na mobilních telefonech a opravil přehrávání zvuků. Měl jsem z výsledku opravdu radost. Líbilo se mi, jak rychle se dá takový artefakt vytvořit – když má člověk materiály, vizi a pomoc od AI.
 

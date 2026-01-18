@@ -60,6 +60,14 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    // Shortcode pro polaroid obrázky
+    eleventyConfig.addShortcode("polaroid", function(position, src, caption) {
+        return `<div class="polaroid ${position}">
+    <img src="${src}" alt="${caption}">
+    <span>${caption}</span>
+</div>`;
+    });
+
     return {
         dir: {
             input: "src",
