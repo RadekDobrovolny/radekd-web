@@ -44,6 +44,22 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
 
+    eleventyConfig.addFilter("breakableLinks", function(content) {
+        if (!content) return content;
+
+        // Najde všechny <a> tagy a upraví jejich obsah
+        return content.replace(/<a([^>]*)>([^<]+)<\/a>/gi, function(match, attributes, linkText) {
+            // Přidá <wbr> po znacích pro lepší zalamování
+            const breakableText = linkText
+                .replace(/\//g, '/<wbr>')
+                .replace(/-/g, '-<wbr>')
+                .replace(/\./g, '.<wbr>')
+                .replace(/_/g, '_<wbr>');
+
+            return `<a${attributes}>${breakableText}</a>`;
+        });
+    });
+
     return {
         dir: {
             input: "src",
