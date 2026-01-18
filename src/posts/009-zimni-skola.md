@@ -1,5 +1,5 @@
 ---
-title: "Překračování hranic"
+title: "Crossing Boundaries"
 layout: post
 tags: 
   - post
@@ -7,86 +7,85 @@ tags:
   - workshop
   - web
   - fun
-desc: 'Digitální artefakt: workshop na Zimní škole KISKu'
+desc: 'Digital Artifact: Workshop at KISK Winter School'
 date: 2025-03-24
-permalink: '/post/prekracovani-hranic.html'
-lang: cs
-alternateUrl: '/post/crossing-boundaries.html'
-alternateLang: en
+permalink: '/post/crossing-boundaries.html'
+alternateUrl: '/post/prekracovani-hranic.html'
+alternateLang: cs
 
 img: '/assets/images/posts/konev.png'
 ---
 
 <p>{{ date | postDate }}</p>
 
-# Digitální artefakt: workshop na Zimní škole KISKu
+# Digital Artifact: Workshop at KISK Winter School
 
-*Na Zimní škole KISKu jsem vedl workshop, ve kterém jsme se pokusili vytvořit společný digitální artefakt – vzpomínku, co přežije fyzický čas i prostor. Povedlo se? A co všechno se dělo během jedné intenzivní hodiny a půl v Nové Cvernovce?*
+*At the KISK Winter School, I led a workshop where we attempted to create a shared digital artifact – a memory that would survive both physical time and space. Did it work? And what happened during one intense hour and a half at Nová Cvernovka?*
 
-## Ideace
+## Ideation
 
-V polovině února 2025 jsem byl na akci pořádané studenty KISKu – první Zimní škole, komunitní události, kterou kompletně realizovali studenti a obsah přinášeli sami účastníci. 
+In mid-February 2025, I attended an event organized by KISK students – the first Winter School, a community event entirely realized by students, with content brought by participants themselves.
 
-{% polaroid "left", "/assets/images/posts/zs-prostor.jpg", "hlavní sál" %}
+{% polaroid "left", "/assets/images/posts/zs-prostor.jpg", "main hall" %}
 
-Akce se konala v Bratislavě, v kreativním a kulturním centru [Nová Cvernovka](https://novacvernovka.eu/). Měl jsem velkou chuť nasát atmosféru tohohle prostředí, udělat si výlet, poznat nové lidi a nahlédnout do současné nálady a témat studentů. A nakonec to bylo moc prima.
+The event took place in Bratislava at the creative and cultural center [Nová Cvernovka](https://novacvernovka.eu/). I was eager to soak up the atmosphere of this environment, take a trip, meet new people, and get a glimpse into the current mood and topics of students. And in the end, it was really great.
 
-Při registraci bylo potřeba rovnou říct, čím chcete do programu přispět. Na výběr byly přednášky, workshopy a další podobné formáty. Napsal jsem trochu obecnou odpověď, protože jsem netušil, jaké budou vstupní podmínky – hlavně čas a počet lidí. Nakonec jsme se dohodli, že udělám workshop. Konkrétně: pokusíme se společně vytvořit digitální artefakt.
+During registration, you had to immediately say what you wanted to contribute to the program. The options were lectures, workshops, and similar formats. I wrote a somewhat general answer because I didn't know what the initial conditions would be – mainly time and number of people. Eventually, we agreed that I would do a workshop. Specifically: we would try to create a digital artifact together.
 
-Nakonec jsme se domluvili na poměrně vražedných parametrech. Časová dotace hodina a půl, cca 15 účastníků. *Uf.* Moje ideální představa byla poloviční počet lidí a naopak víc než dvě hodiny času. No co – bude to výzva a bude to intenzivní.
+We ended up agreeing on quite challenging parameters. Time allocation of an hour and a half, about 15 participants. *Phew.* My ideal scenario was half the number of people and more than two hours. Oh well – it would be a challenge and it would be intense.
 
-## Téma a ukotvení
+## Theme and Anchoring
 
-Hodně se mi líbil claim celé akce: *překračování hranic*. Mým cílem bylo během workshopu vytvořit nějaké digitální dílo – vzpomínku na tuto akci – na kterém se budou podílet všichni účastníci.
+I really liked the claim of the whole event: *crossing boundaries*. My goal was to create some digital work during the workshop – a memory of this event – that all participants would contribute to.
 
-{% polaroid "right", "/assets/images/posts/zs-prezijeme.jpg", "Fyzický artefakt" %}
+{% polaroid "right", "/assets/images/posts/zs-prezijeme.jpg", "Physical artifact" %}
 
-Nejdřív ale trochu teorie. Snažil jsem se na úvod představit, co to vlastně digitální artefakty jsou, a ukázat pár příkladů. Mluvili jsme o tom, že se pohybujeme na pomezí digitální tvorby, umění, programování a generativního umění – a že hranice mezi těmito oblastmi jsou často dost rozmazané. Nechtěl jsem zabřednout do debat, jestli se jedná o umění, nebo ne. To pro mě v ten moment nebylo důležité. Vnímám digitální artefakty jako nástroj sebevyjádření.
+But first, a bit of theory. I tried to introduce what digital artifacts actually are and show a few examples. We talked about how we're operating at the intersection of digital creation, art, programming, and generative art – and that the boundaries between these areas are often quite blurred. I didn't want to get bogged down in debates about whether it's art or not. That wasn't important to me at that moment. I perceive digital artifacts as a tool for self-expression.
 
-Zmínil jsem výzvu [Genuary](https://genuary.art), agregátor [The Useless Web](https://theuselessweb.com/) a představil některé tvůrce na Instagramu. Na teoretický úvod jsme měli asi 15 minut – snažil jsem se toho předat co nejvíc, ale v tomhle čase to možná působilo trochu krkolomně.
+I mentioned the [Genuary](https://genuary.art) challenge, the aggregator [The Useless Web](https://theuselessweb.com/), and introduced some creators on Instagram. We had about 15 minutes for the theoretical introduction – I tried to convey as much as possible, but in this time it might have seemed a bit convoluted.
 
-## Role a rozdělení
+## Roles and Division
 
-Pak už jsem představil, co bychom se mohli pokusit vytvořit my. Chtěl jsem pracovat s knihovnou p5.js, kterou jsem velmi stručně představil: máme plátno, na kterém můžeme tvořit, a výstup pak umístit na web. Cílem bylo pokusit se vyjádřit atmosféru zimní školy a uchovat ji v digitálním světě – něco, co třeba i za pět let vyvolá nějaký pocit.
+Then I presented what we could try to create. I wanted to work with the p5.js library, which I briefly introduced: we have a canvas on which we can create, and then place the output on the web. The goal was to try to express the atmosphere of the winter school and preserve it in the digital world – something that might evoke a feeling even in five years.
 
-{% polaroid "left", "/assets/images/posts/zs-rajcata.jpg", "zelenina" %}
+{% polaroid "left", "/assets/images/posts/zs-rajcata.jpg", "vegetables" %}
 
-Měl jsem připravené malé podskupinky, do kterých se účastníci rozdělili.
+I had prepared small subgroups that participants divided into.
 
-První skupinka měla za úkol sbírat vizuální vjemy – chodit po prostoru a udělat pár fotek.
+The first group was tasked with collecting visual impressions – walking around the space and taking some photos.
 
-Druhá skupinka sbírala zvuky – ruchy, hlášky, nebo i krátké vzkazy.
+The second group collected sounds – noises, phrases, or even short messages.
 
-Třetí se soustředila na texty – úryvky z přednášek, materiálů, nápisy a další textové útržky, které na ně nějak působily.
+The third focused on texts – excerpts from lectures, materials, inscriptions, and other text fragments that affected them somehow.
 
-Předposlední skupina měla na starost vizuální styl – fonty, barvy, grafické prvky.
+The penultimate group was in charge of visual style – fonts, colors, graphic elements.
 
-Poslední skupinka byli interakční designéři – jejich úkolem bylo vymyslet, jak se bude stránka chovat, co se bude zobrazovat, jak bude vypadat interakce.
+The last group were interaction designers – their task was to come up with how the page would behave, what would be displayed, how the interaction would look.
 
 {% polaroid "right", "/assets/images/posts/zs-koule.jpg", "Disco" %}
 
-Účastníci si sami vybrali skupinku a vyrazili sbírat. Na sběr dat jsme měli asi půl hodiny. Já si přisedl ke skupince designerů a pomáhal určovat hranice mezi tím, co jsme schopni realizovat, a co už by bylo příliš náročné.
+Participants chose their own group and went off to collect. We had about half an hour for data collection. I sat down with the designers' group and helped determine the boundaries between what we were capable of implementing and what would be too demanding.
 
-## Let them cook
+## Let Them Cook
 
-Hlavní myšlenka byla práce s tématem „*překračování hranic*“. Uprostřed obrazovky se mají zobrazovat dvě kontrastní textová sdělení. Obrazovka je rozdělená fluidní vertikální hranicí. A po obrazovce se pohybují grafické objekty, které se při překročení hranice změní. Při dotyku se zastaví a přehrají náhodný zvuk. Ok, myšlenky jsme měli. Na papíře to vypadalo proveditelně – i když jsem popravdě netušil, jak rychle to půjde dát dohromady.
+The main idea was working with the theme of "*crossing boundaries*". Two contrasting text messages should be displayed in the middle of the screen. The screen is divided by a fluid vertical boundary. And graphic objects move around the screen, which change when crossing the boundary. On touch, they stop and play a random sound. Ok, we had ideas. On paper, it looked feasible – although I honestly had no idea how quickly it could be put together.
 
-Půl hodina uplynula, účastníci se vrátili a začali jsme prezentovat nasbírané materiály. Každá skupina přidala kontext, proč vybrali právě tohle. Bylo to bohaté, rozmanité. Materiálu bylo dost – ale ne tolik, aby nás zahltil. Měl jsem radost.
+Half an hour passed, participants returned, and we started presenting the collected materials. Each group added context about why they chose this particular thing. It was rich, diverse. There was enough material – but not so much that it overwhelmed us. I was pleased.
 
-V téhle fázi jsme ještě doladili plán interakce a celkový koncept. A tím jsme se dostali na konec časového rámce workshopu.
+At this stage, we still fine-tuned the interaction plan and overall concept. And with that, we reached the end of the workshop's time frame.
 
-## Realizace
+## Implementation
 
-Já si pak všechny materiály posbíral a šlo se na večeři. A večer jsem se pustil do realizace. Měl jsem připravenou webovou šablonu s p5.js canvasem. Vložil jsem pozadí, vytvořil panel pro zobrazování textů, napsal funkci na náhodný výběr a zobrazení. Přidal jsem pohyb obrázků. Měl jsem trochu strach z té „fluidní hranice“ uprostřed obrazovky. Hojně jsem využíval ChatGPT pro generování kódu a já ho pak skládal dohromady jako puzzle a ladil detaily. Nakonec jsem přidal zvuky a dotykovou interakci. Asi za hodinu a půl byl výsledek hotový – a mohl jsem ho prezentovat ostatním.
+I then collected all the materials and went to dinner. And in the evening, I started the implementation. I had a web template with a p5.js canvas prepared. I inserted the background, created a panel for displaying texts, wrote a function for random selection and display. I added movement to the images. I was a bit worried about the "fluid boundary" in the middle of the screen. I heavily used ChatGPT to generate code, and then I put it together like a puzzle and fine-tuned the details. Finally, I added sounds and touch interaction. In about an hour and a half, the result was ready – and I could present it to others.
 
 {% polaroid "left", "/assets/images/posts/zs-valentin.jpg", "Valentín" %}
 
-Pak už jsem jen dolaďoval zobrazení na mobilních telefonech a opravil přehrávání zvuků. Měl jsem z výsledku opravdu radost. Líbilo se mi, jak rychle se dá takový artefakt vytvořit – když má člověk materiály, vizi a pomoc od AI.
+Then I just fine-tuned the display on mobile phones and fixed sound playback. I was really pleased with the result. I liked how quickly such an artifact can be created – when you have materials, vision, and help from AI.
 
-## Uvařeno
+## Cooked
 
-Výsledek jsem nahrál do [repozitáře na GitHubu](https://github.com/RadekDobrovolny/zimni_skola_2025), kde zároveň používám GitHub Pages pro hosting. Digitální artefakt si můžete prohlédnout zde: [radekdobrovolny.github.io/zimni_skola_2025](https://radekdobrovolny.github.io/zimni_skola_2025/).
+I uploaded the result to a [GitHub repository](https://github.com/RadekDobrovolny/zimni_skola_2025), where I also use GitHub Pages for hosting. You can view the digital artifact here: [radekdobrovolny.github.io/zimni_skola_2025](https://radekdobrovolny.github.io/zimni_skola_2025/).
 
-Měl jsem radost, že se cíl workshopu podařilo naplnit. Že každý přispěl svým dílem do společného, komunitního výsledku. A teď se uvidí – jestli se k tomu artefaktu někdo za pár let vrátí, nebo upadne v zapomnění.
+I was glad that the workshop's goal was fulfilled. That everyone contributed their part to the shared, community result. And now we'll see – whether someone will return to that artifact in a few years, or it will fall into oblivion.
 
-Rád bych si tenhle workshop někdy zopakoval. Ideálně v méně divoké formě, kdy bude více času, s menší skupinou a větším zapojením účastníků do tvorby v p5.js. Ukázat, jak s pomocí ChatGPT přetavit nápady do kódu a rozhýbat je v digitálním prostoru.
+I would like to repeat this workshop sometime. Ideally in a less wild form, when there will be more time, with a smaller group and greater participant involvement in creating with p5.js. To show how to transform ideas into code with ChatGPT's help and animate them in digital space.

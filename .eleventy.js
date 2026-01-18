@@ -38,6 +38,14 @@ module.exports = function (eleventyConfig) {
         return result;
     });
 
+    // Filtr pro zobrazení pouze default jazykových verzí (bez cs alternativ)
+    eleventyConfig.addFilter("onlyDefaultLang", function (posts) {
+        return posts.filter(p => {
+            // Zobrazit post pouze pokud nemá lang: cs (tzn. je to buď en nebo nemá lang vůbec)
+            return !p.data.lang || p.data.lang !== 'cs';
+        });
+    });
+
     const {DateTime} = require("luxon");
 
     eleventyConfig.addFilter("postDate", (dateObj) => {
