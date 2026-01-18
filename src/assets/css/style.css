@@ -647,11 +647,6 @@ body.dark-mode .bx {
     transition: all 0.2s ease;
 }
 
-.language-toggle:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px var(--shadow-color);
-}
-
 body.dark-mode .language-toggle {
     background: var(--background-color);
     color: var(--text-color);
