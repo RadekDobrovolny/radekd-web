@@ -10,6 +10,9 @@ tags:
 desc: 'Digitální artefakt: workshop na Zimní škole KISKu'
 date: 2025-03-24
 permalink: '/post/prekracovani-hranic.html'
+lang: cs
+alternateUrl: '/post/crossing-boundaries.html'
+alternateLang: en
 
 img: '/assets/images/posts/konev.png'
 ---

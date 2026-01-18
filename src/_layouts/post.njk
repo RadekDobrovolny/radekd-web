@@ -5,6 +5,13 @@
     <div class="main-container">
         <section class="content-row">
             <div class="card resume">
+                {% if alternateUrl %}
+                <div class="language-switch">
+                    <a href="{{ alternateUrl }}" lang="{{ alternateLang }}" class="language-toggle">
+                        {% if alternateLang == 'en' %}🇬🇧 Read in English{% else %}🇨🇿 Číst česky{% endif %}
+                    </a>
+                </div>
+                {% endif %}
                 {{ content | breakableLinks | safe }}
             </div>
         </section>
