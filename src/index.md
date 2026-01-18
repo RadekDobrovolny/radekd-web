@@ -12,7 +12,7 @@ welcome:
     profile: 'assets/images/profile-bw-trans.png'
 ---
 
-{% set filteredPosts = collections.post | onlyDefaultLang %}
-{% for post in filteredPosts | reverse %}
+{% assign filteredPosts = collections.post | onlyDefaultLang %}
+{% for post in filteredPosts reversed %}
 {% include "partials/_item-list.njk" %}
 {% endfor %}
