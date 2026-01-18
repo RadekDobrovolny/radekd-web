@@ -41,8 +41,9 @@ module.exports = function (eleventyConfig) {
     // Filtr pro zobrazení pouze default jazykových verzí (bez cs alternativ)
     eleventyConfig.addFilter("onlyDefaultLang", function (posts) {
         return posts.filter(p => {
-            // Zobrazit post pouze pokud nemá lang: cs (tzn. je to buď en nebo nemá lang vůbec)
-            return !p.data.lang || p.data.lang !== 'cs';
+            // Vyfiltrovat soubory s příponou .cs.md (české verze)
+            const inputPath = p.inputPath || '';
+            return !inputPath.includes('.cs.md');
         });
     });
 
