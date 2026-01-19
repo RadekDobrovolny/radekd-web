@@ -1,45 +1,49 @@
-const audioElements = {};
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const audioBuffers = {};
+let isLoading = true;
 
-// Vytvoř audio pool pro každou notu (více instancí pro plynulé přehrávání)
-const POOL_SIZE = 3;
+// Načti všechny audio soubory do bufferů
+async function loadAudioFiles() {
+    const promises = Object.entries(notes).map(async ([note, url]) => {
+        try {
+            const response = await fetch(url);
+            const arrayBuffer = await response.arrayBuffer();
+            const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+            audioBuffers[note] = audioBuffer;
+        } catch (err) {
+            console.error(`Failed to load ${note}:`, err);
+        }
+    });
 
-Object.entries(notes).forEach(([note, url]) => {
-    audioElements[note] = [];
-    for (let i = 0; i < POOL_SIZE; i++) {
-        const audio = new Audio(url);
-        audio.preload = 'auto';
-        audio.volume = 1.0;
-        audioElements[note].push(audio);
-    }
-});
-
-// Index pro round-robin výběr z poolu
-const noteIndex = {};
-Object.keys(notes).forEach(note => noteIndex[note] = 0);
+    await Promise.all(promises);isLoading = false;
+}
 
 function playNote(note) {
-    if (!audioElements[note]) return;
+    if (isLoading || !audioBuffers[note]) return;
 
-    const pool = audioElements[note];
-    const audio = pool[noteIndex[note]];
+    // Obnovení audio kontextu po user interaction (mobilní požadavek)
+    if (audioContext.state === 'suspended') {
+        audioContext.resume();
+    }
 
-    // Přepni na další audio v poolu
-    noteIndex[note] = (noteIndex[note] + 1) % POOL_SIZE;
-
-    // Zastav předchozí přehrávání a začni znovu
-    audio.pause();
-    audio.currentTime = 0;
-    audio.play().catch(err => console.warn('Audio play failed:', err));
+    // Vytvoř nový source node pro každé přehrání
+    const source = audioContext.createBufferSource();
+    source.buffer = audioBuffers[note];
+    source.connect(audioContext.destination);
+    source.start(0);
 }
+
+// Načti audio soubory při startu
+loadAudioFiles();
 
 document.querySelectorAll('.key').forEach(key => {
     const note = key.getAttribute('data-note');
 
-    // Použij touchstart pro lepší odezvu na mobilech
+    // Touchstart s pasivní optimalizací
     key.addEventListener('touchstart', (e) => {
-        e.preventDefault(); // Zabraň ghost clicku
+        e.preventDefault();
         playNote(note);
-    });
+    }, { passive: false });
 
     key.addEventListener('click', () => {
         playNote(note);
