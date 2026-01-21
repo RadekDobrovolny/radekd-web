@@ -53,6 +53,10 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
 
+    eleventyConfig.addFilter("currentYear", function() {
+        return new Date().getFullYear();
+    });
+
     eleventyConfig.addFilter("breakableLinks", function(content) {
         if (!content) return content;
 
