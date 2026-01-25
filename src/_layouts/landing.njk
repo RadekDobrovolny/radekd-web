@@ -12,7 +12,7 @@
 
             <div class="card profile-photo">
                 <h2>{{ welcome.greetings }}</h2>
-                <img src="{{ welcome.profile }}" alt="Profile photo of {{ welcome.name }}">
+                <img src="{{ welcome.profile }}" alt="Profile photo of {{ welcome.name }}" loading="eager" fetchpriority="high">
             </div>
         </section>
 
