@@ -1,6 +1,6 @@
 <a href="{{ post.url | url }}">
 <div class="blog-item">
-    <img src="{{ post.data.img | url }}">
+    <img src="{{ post.data.img | url }}" alt="{{ post.data.title }}">
     <h3>{{ post.data.title }}</h3>
     <p>{{ post.data.desc }}</p>
     <p><span class="date">{{ post.date | postDate }}</span></p>
