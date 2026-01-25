@@ -168,7 +168,7 @@ section.first {
     line-height: 1;
 }
 
-.welcome h1 {
+.welcome h1, .tags h2, .recent h2, .profile-photo h2 {
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-size: 3em;
@@ -206,7 +206,7 @@ body.dark-mode .profile-photo {
     background: #764134;
 }
 
-.profile-photo h3 {
+.profile-photo h2 {
     position: absolute;
     left: 20px;
     top: 20px;

@@ -11,14 +11,14 @@
             </div>
 
             <div class="card profile-photo">
-                <h3>{{ welcome.greetings }}</h3>
+                <h2>{{ welcome.greetings }}</h2>
                 <img src="{{ welcome.profile }}">
             </div>
         </section>
 
         <section class="content-row">
             <div class="card tags">
-                <h3>Interests</h3>
+                <h2>Interests</h2>
                 <div class="tag-list">
                     {% for category in collections.categories %}
                         {% if category != "post" and category != "portfolio" %}
@@ -31,7 +31,7 @@
 
         <section class="content-row">
             <div class="card recent">
-                <h3>Recent posts</h3>
+                <h2>Recent posts</h2>
                 <div class="blog-list">
                     {{ content | safe }}
                 </div>
