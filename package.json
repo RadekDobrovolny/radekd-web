@@ -18,5 +18,8 @@
     "@fontsource-variable/lexend-mega": "latest",
     "@fontsource-variable/outfit": "latest",
     "@fontsource/permanent-marker": "latest"
+  },
+  "dependencies": {
+    "boxicons": "^2.1.4"
   }
 }

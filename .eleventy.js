@@ -18,6 +18,14 @@ module.exports = function (eleventyConfig) {
         "node_modules/@fontsource/permanent-marker/files": "assets/fonts"
     });
 
+    // Boxicons (npm) - CSS a fonty
+    eleventyConfig.addPassthroughCopy({
+        "node_modules/boxicons/css/boxicons.min.css": "assets/css/boxicons.min.css"
+    });
+    eleventyConfig.addPassthroughCopy({
+        "node_modules/boxicons/fonts": "assets/fonts"
+    });
+
     eleventyConfig.addPassthroughCopy("src/robots.txt");
 
     eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
