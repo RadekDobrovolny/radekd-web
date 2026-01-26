@@ -6,7 +6,19 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/scripts");
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/assets/sounds");
-    eleventyConfig.addPassthroughCopy("src/assets/fonts");
+    // eleventyConfig.addPassthroughCopy("src/assets/fonts"); // nepoužíváme, fonty bereme z @fontsource
+
+    // Kopírování fontů z @fontsource (npm) do /assets/fonts
+    eleventyConfig.addPassthroughCopy({
+        "node_modules/@fontsource-variable/lexend-mega/files": "assets/fonts"
+    });
+    eleventyConfig.addPassthroughCopy({
+        "node_modules/@fontsource-variable/outfit/files": "assets/fonts"
+    });
+    eleventyConfig.addPassthroughCopy({
+        "node_modules/@fontsource/permanent-marker/files": "assets/fonts"
+    });
+
     eleventyConfig.addPassthroughCopy("src/robots.txt");
 
     eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));

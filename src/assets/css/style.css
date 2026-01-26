@@ -5,7 +5,8 @@
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
-    src: url("../fonts/lexend-mega-latinext-wght.woff2") format("woff2");
+    /* @fontsource-variable/lexend-mega → node_modules/.../files → /assets/fonts */
+    src: url("../fonts/lexend-mega-latin-wght-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,7 +14,8 @@
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
-    src: url("../fonts/outfit-latinext-wght.woff2") format("woff2");
+    /* @fontsource-variable/outfit → node_modules/.../files → /assets/fonts */
+    src: url("../fonts/outfit-latin-ext-wght-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -21,7 +23,8 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("../fonts/permanent-marker-latinext-400.woff2") format("woff2");
+    /* @fontsource/permanent-marker → node_modules/.../files → /assets/fonts */
+    src: url("../fonts/permanent-marker-latin-400-normal.woff2") format("woff2");
 }
 
 /* ===== RESET & BASE ===== */
