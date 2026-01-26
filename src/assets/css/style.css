@@ -16,7 +16,7 @@
     font-stretch: 100%;
     font-display: swap;
     /* @fontsource-variable/outfit → node_modules/.../files → /assets/fonts */
-    src: url("/assets/fonts/outfit-latin-ext-wght-normal.woff2") format("woff2");
+    src: url("/assets/fonts/outfit-latin-wght-normal.woff2") format("woff2");
 }
 
 @font-face {
