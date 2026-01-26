@@ -15,8 +15,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@fontsource-variable/lexend-mega": "^5.2.10",
-    "@fontsource-variable/outfit": "^5.2.8",
-    "@fontsource/permanent-marker": "^5.2.7"
+    "@fontsource-variable/lexend-mega": "latest",
+    "@fontsource-variable/outfit": "latest",
+    "@fontsource/permanent-marker": "latest"
   }
 }
