@@ -6,7 +6,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/scripts");
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/assets/sounds");
-    // eleventyConfig.addPassthroughCopy("src/assets/fonts"); // nepoužíváme, fonty bereme z @fontsource
 
     // Kopírování fontů z @fontsource (npm) do /assets/fonts
     eleventyConfig.addPassthroughCopy({
