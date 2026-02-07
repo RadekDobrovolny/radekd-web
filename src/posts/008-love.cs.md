@@ -13,7 +13,7 @@ lang: cs
 alternateUrl: '/post/what-is-love.html'
 alternateLang: en
 
-img: '/assets/images/posts/love.png'
+img: '/assets/images/posts/008-love.png'
 ---
 
 # Co je láska? Letní škola KISKu 2022

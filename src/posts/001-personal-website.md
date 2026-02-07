@@ -9,7 +9,7 @@ desc: 'The decision and the way I built this website'
 date: 2024-06-09
 permalink: '/post/personal-website.html'
 
-img: '/assets/images/posts/ice-cream.png'
+img: '/assets/images/posts/001-ice-cream.png'
 ---
 
 <p>{{ date | postDate }}</p> 

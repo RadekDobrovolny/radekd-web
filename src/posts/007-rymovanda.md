@@ -10,7 +10,7 @@ desc: 'Jam-like project. Playing with words just for fun'
 date: 2024-06-28
 permalink: '/post/rymovanda.html'
 
-img: '/assets/images/posts/rymovanda.png'
+img: '/assets/images/posts/007-rymovanda.png'
 ---
 
 # Rýmovanda

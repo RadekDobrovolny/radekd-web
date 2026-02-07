@@ -14,7 +14,7 @@ lang: cs
 alternateUrl: '/post/crossing-boundaries.html'
 alternateLang: en
 
-img: '/assets/images/posts/konev.png'
+img: '/assets/images/posts/009-zimni-skola.png'
 ---
 
 <p>{{ date | postDate }}</p>

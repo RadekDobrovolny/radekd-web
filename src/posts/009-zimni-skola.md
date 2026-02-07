@@ -13,7 +13,7 @@ permalink: '/post/crossing-boundaries.html'
 alternateUrl: '/post/prekracovani-hranic.html'
 alternateLang: cs
 
-img: '/assets/images/posts/konev.png'
+img: '/assets/images/posts/009-zimni-skola.png'
 ---
 
 <p>{{ date | postDate }}</p>

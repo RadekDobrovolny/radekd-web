@@ -13,7 +13,7 @@ lang: en
 alternateUrl: '/post/co-je-laska.html'
 alternateLang: cs
 
-img: '/assets/images/posts/love.png'
+img: '/assets/images/posts/008-love.png'
 ---
 
 # What is love? KISK Summer School 2022
