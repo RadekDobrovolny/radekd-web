@@ -5,6 +5,7 @@ tags:
   - post
   - portfolio
   - web
+  - fun
 desc: 'Digital drawer for ideas'
 date: 2026-02-07
 permalink: '/post/drawer.html'
@@ -12,7 +13,7 @@ lang: en
 alternateUrl: '/post/suplik.html'
 alternateLang: cs
 
-img: '/assets/images/posts/010-lightbulb.png'
+img: '/assets/images/posts/010-light.png'
 ---
 
 <p>{{ date | postDate }}</p>
