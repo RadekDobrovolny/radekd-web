@@ -21,6 +21,15 @@
 }
 
 @font-face {
+    font-family: "Lexend Mega";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    /* @fontsource-variable/lexend-mega → node_modules/.../files → /assets/fonts */
+    src: url("/assets/fonts/lexend-mega-latin-wght-normal.woff2") format("woff2");
+}
+
+@font-face {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 100 900;
@@ -50,7 +59,7 @@
 }
 
 :root {
-    --text-color: black;
+    --text-color: #282825;
     --shadow-color: black;
     --border: 3px solid black;
     --thic-shadow: 6px 8px black;
@@ -63,13 +72,14 @@ html {
 }
 
 body {
-    font-family: "Cabin", sans-serif;
+    font-family: "Lexend Mega", sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
 }
 
 a {
+    color: #ff69b4;
     text-decoration: none;
     overflow-wrap: break-word;
     word-break: normal;
@@ -431,6 +441,7 @@ body.dark-mode .blog-item img {
     margin-left: auto;
     margin-right: auto;
     padding: 60px;
+    font-family: "Cabin", sans-serif;
 }
 
 body.dark-mode .resume {
@@ -441,15 +452,27 @@ body.dark-mode .resume {
 .resume h2 {
     display: inline-block;
     background: #ffd966;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5em;
     padding: 5px 15px;
     margin: 40px 0 5px 0;
+    font-family: "Lexend Mega", sans-serif;
+}
+
+.resume h2 a{
+    color: black;
 }
 
 .resume h2 {
     background: #ffe599;
     font-size: 1em;
+}
+
+.resume p {
+    font-family: "Cabin", sans-serif;
+    font-size: 1.25em;
+    font-weight: 400;
+    font-stretch: 100%;
 }
 
 body.dark-mode .resume h1,
@@ -514,6 +537,7 @@ body.dark-mode .polaroid {
 .language-switch {
     margin-bottom: 20px;
     text-align: right;
+    font-family: "Lexend Mega", sans-serif;
 }
 
 .language-toggle {

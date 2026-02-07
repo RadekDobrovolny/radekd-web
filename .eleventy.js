@@ -12,6 +12,9 @@ module.exports = function (eleventyConfig) {
         "node_modules/@fontsource-variable/cabin/files": "assets/fonts"
     });
     eleventyConfig.addPassthroughCopy({
+        "node_modules/@fontsource-variable/lexend-mega/files": "assets/fonts"
+    });
+    eleventyConfig.addPassthroughCopy({
         "node_modules/@fontsource-variable/outfit/files": "assets/fonts"
     });
     eleventyConfig.addPassthroughCopy({
