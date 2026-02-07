@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
 
     // Kopírování fontů z @fontsource (npm) do /assets/fonts
     eleventyConfig.addPassthroughCopy({
-        "node_modules/@fontsource-variable/lexend-mega/files": "assets/fonts"
+        "node_modules/@fontsource-variable/cabin/files": "assets/fonts"
     });
     eleventyConfig.addPassthroughCopy({
         "node_modules/@fontsource-variable/outfit/files": "assets/fonts"
