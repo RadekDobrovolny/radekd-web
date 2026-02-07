@@ -1,5 +1,5 @@
 ---
-title: "Drawer"
+title: "Šuplík"
 layout: post
 tags:
   - post
@@ -18,6 +18,8 @@ img: '/assets/images/posts/010-lightbulb.png'
 <p>{{ date | postDate }}</p>
 
 # Drawer: Digital drawer for ideas
+
+## [suplik.hippou.cz](https://suplik.hippou.cz/)
 
 It was just after eight in the evening and I felt like creating something. I fooled around with ChatGPT for a while, asking if it could suggest a topic for a two-hour project, but nothing seemed interesting. However, it led me to realize that I often come up with ideas, nice little things, and then forget about them.
 
@@ -42,6 +44,8 @@ But at that time I was playing with my home server, so I decided to try to redo 
 The installation wasn't completely smooth, but it worked and I got PocketBase running on my server.
 
 Then it was easy. Export data from Supabase, upload it to PocketBase (actually, the import didn't work for me, so I copied those eight rows manually), set public access, adjust the database connection in the code (one prompt for Claude) and deploy. It works. Joy again.
+
+## Enjoy
 
 So if you ever get an idea that you want to put in a drawer, feel free to use [Drawer](https://suplik.hippou.cz/). And if you're bored and looking for inspiration, you can look into the [Drawer](https://suplik.hippou.cz/) and maybe start something.
 

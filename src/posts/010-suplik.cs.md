@@ -19,7 +19,7 @@ img: '/assets/images/posts/010-lightbulb.png'
 
 # Šuplík: Digitální šuplík na nápady
 
-[suplik.hippou.cz](https://suplik.hippou.cz/)
+## [suplik.hippou.cz](https://suplik.hippou.cz/)
 
 Bylo něco po osmé hodině večer a měl jsem chuť něco vytvořit. Chvilku jsem laškoval s ChatGPT, jestli mi poradí téma na dvouhodinový projekt, ale nic mi nepřišlo zajímavé. Dovedlo mě to ale k tomu, že mě často něco napadne, nějaká milá drobnička, a pak na ni zapomenu.
 
@@ -44,6 +44,8 @@ Já si ale tou dobou hrál se svým domácím serverem, tak jsem se rozhodl to z
 Instalace nebyla úplně smooth, ale povedlo se a PocketBase jsem na svém serveru roztočil.
 
 Pak už to bylo snadné. Exportovat data ze Supabase, nahrát je do PocketBase (respektive, import se mi nepovedl, takže jsem těch osm řádků překopíroval ručně), nastavit veřejný přístup, upravit připojení k databázi v kódu (jeden prompt pro Claude) a deploy. Funguje. Znovu radost.
+
+## Užijte!
 
 Takže pokud někdy dostanete nápad, který si budete chtít odložit do šuplíku, klidně použijte [Šuplík](https://suplik.hippou.cz/). A pokud se budete nudit a hledat inspiraci, můžete se do [Šuplíku](https://suplik.hippou.cz/) podívat a třeba se do něčeho pustit.
 
