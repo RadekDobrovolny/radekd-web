@@ -96,6 +96,18 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    eleventyConfig.addFilter("nonBreakingSpaces", function(content) {
+        if (!content) return content;
+
+        // Nahradí mezery za jednopísmennými předložkami a spojkami nezalomitelnými mezerami
+        // České: a, i, k, o, s, u, v, z | Anglické: a, I
+        // Regex zachycuje text pouze mimo HTML tagy
+        return content.replace(/>([^<]+)</g, function(match, text) {
+            const processedText = text.replace(/\b([aAiIkKoOsSuUvVzZ])\s+/g, '$1\u00A0');
+            return '>' + processedText + '<';
+        });
+    });
+
     // Shortcode pro polaroid obrázky
     eleventyConfig.addShortcode("polaroid", function(position, src, caption) {
         return `<div class="polaroid ${position}">

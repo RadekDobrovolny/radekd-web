@@ -12,7 +12,7 @@
                     </a>
                 </div>
                 {% endif %}
-                {{ content | breakableLinks | safe }}
+                {{ content | nonBreakingSpaces | breakableLinks | safe }}
             </div>
         </section>
     </div>

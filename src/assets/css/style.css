@@ -73,7 +73,7 @@ html {
 
 body {
     font-family: "Lexend Mega", sans-serif;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
@@ -449,13 +449,13 @@ body.dark-mode .resume {
 }
 
 .resume h1,
-.resume h2 {
-    display: inline-block;
+.resume h2{
+    display: table;
     background: #ffd966;
     font-weight: 400;
     font-size: 1.5em;
     padding: 5px 15px;
-    margin: 40px 0 5px 0;
+    margin: 40px 0 10px 0;
     font-family: "Lexend Mega", sans-serif;
 }
 
@@ -473,6 +473,19 @@ body.dark-mode .resume {
     font-size: 1.25em;
     font-weight: 400;
     font-stretch: 100%;
+    text-wrap: pretty;
+    line-height: 1.8;
+    max-width: 45ch;
+}
+
+.resume ul,
+.resume ol {
+    font-family: "Cabin", sans-serif;
+    font-size: 1.25em;
+    font-weight: 400;
+    font-stretch: 100%;
+    line-height: 1.8;
+    max-width: 45ch;
 }
 
 body.dark-mode .resume h1,
@@ -494,6 +507,7 @@ body.dark-mode .resume h2 {
     transition: transform 0.2s;
     border: var(--border);
     box-shadow: 8px 8px var(--shadow-color);
+    pointer-events: none;
 }
 
 body.dark-mode .polaroid {
