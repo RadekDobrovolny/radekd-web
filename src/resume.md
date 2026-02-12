@@ -1,18 +1,18 @@
 ---
 layout: resume
-title: "Resumé"
+title: "Résumé"
 tags: page
 
 date: 2024-06-02
 ---
 
-# resumé
+# résumé
 
 You can explore my complete job history on LinkedIn.
 
 <a href="https://www.linkedin.com/in/radekdobrovolny/" target=”_blank”>www.linkedin.com/in/radekdobrovolny</a>
 
-This resumé is a blend of
+This résumé is a blend of
 the technologies I've worked with and includes links to articles about projects
 where I've used these skills. I hope you find it helpful!
 
@@ -51,8 +51,8 @@ Occasionally, I do frontend for small projects or just for fun (like this websit
 - debugging and maintaining existing codebases
 
 **production experience:**
-- built and maintained a Django-based CRM for a small business  
-- involved in application design, implementation, and ongoing maintenance
+- built and maintained a Django-based CRM for a small business
+- involved in design, implementation and ongoing maintenance of large-scale applications
 
 **learning / next focus:** background tasks, performance tuning (query optimization, N+1 problems)
 

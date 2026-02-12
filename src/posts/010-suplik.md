@@ -24,7 +24,7 @@ img: '/assets/images/posts/010-light.png'
 
 It was just after eight in the evening and I felt like creating something. I fooled around with ChatGPT for a while, asking if it could suggest a topic for a two-hour project, but nothing seemed interesting. However, it led me to realize that I often come up with ideas, nice little things, and then forget about them.
 
-So I thought of creating a digital [Drawer](https://suplik.hippou.cz/) where I could toss that idea (and probably never return to it). Sure, it would certainly be enough to create a page for it in Notion, notes on my phone, or a document on Drive. But I liked the idea that it would be hanging publicly and that anyone could toss an idea into the drawer. It's not about practicality, it's about the feeling.
+So I thought of creating a digital [drawer](https://suplik.hippou.cz/) where I could toss that idea (and probably never return to it). Sure, it would certainly be enough to create a page for it in Notion, notes on my phone, or a document on Drive. But I liked the idea that it would be hanging publicly and that anyone could toss an idea into the drawer. It's not about practicality, it's about the feeling.
 
 It was a bit more diverse on the technical side, where I wanted to try new things. I wanted to solve it as a simple web app that stores data. I was looking for whether there are online hosted databases where you can store data for free for mini-projects. I then wanted to host the web app itself as usual on GitHub Pages.
 
