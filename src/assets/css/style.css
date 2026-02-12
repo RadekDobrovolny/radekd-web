@@ -454,8 +454,8 @@ body.dark-mode .resume {
     background: #ffd966;
     font-weight: 400;
     font-size: 1.5em;
-    padding: 5px 15px;
-    margin: 40px 0 10px 0;
+    padding: 5px 20px;
+    margin: 2em 0 1em 0;
     font-family: "Lexend Mega", sans-serif;
 }
 
@@ -472,10 +472,11 @@ body.dark-mode .resume {
     font-family: "Cabin", sans-serif;
     font-size: 1.25em;
     font-weight: 400;
-    font-stretch: 100%;
     text-wrap: pretty;
-    line-height: 1.8;
+    line-height: 1.6;
     max-width: 45ch;
+    margin-bottom: 1em;
+    letter-spacing: 0.02em;
 }
 
 .resume ul,
@@ -486,6 +487,7 @@ body.dark-mode .resume {
     font-stretch: 100%;
     line-height: 1.8;
     max-width: 45ch;
+    list-style-position: inside;
 }
 
 body.dark-mode .resume h1,
