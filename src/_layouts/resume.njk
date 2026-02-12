@@ -5,7 +5,7 @@
     <div class="main-container">
         <section class="content-row">
             <div class="card resume">
-                {{ content | safe }}
+                {{ content | nonBreakingSpaces | breakableLinks | safe }}
             </div>
         </section>
     </div>

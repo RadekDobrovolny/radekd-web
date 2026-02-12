@@ -8,9 +8,8 @@ date: 2024-06-02
 
 # résumé
 
-You can explore my complete job history on LinkedIn.
-
-<a href="https://www.linkedin.com/in/radekdobrovolny/" target=”_blank”>www.linkedin.com/in/radekdobrovolny</a>
+You can explore my complete job history on LinkedIn: 
+[linkedin.com/in/radekdobrovolny](https://www.linkedin.com/in/radekdobrovolny/)
 
 This résumé is a blend of
 the technologies I've worked with and includes links to articles about projects
