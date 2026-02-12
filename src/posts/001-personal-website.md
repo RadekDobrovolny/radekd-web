@@ -28,11 +28,11 @@ jakousi business verzi a pak detailní technickou, kterou bych mohl posílat pr�
 
 ## Portfolio
 
-K technickému resumé by bylo dobré mít i ukázky svojí práce. Tohle byla úplně automatická myšlenka. Vzpomněl jsem si,
+K technickému résumé by bylo dobré mít i ukázky svojí práce. Tohle byla úplně automatická myšlenka. Vzpomněl jsem si,
 jak současní studenti KISKu jsou vedeni k tomu, aby si během studia začali utvářet svoje portfolio, formou webové
 stránky. Většinou si vytvoří web na Wordpressu anebo Google Sites a píšou tam shrnutí svých semestrů, čemu se věnují a
 co nového se naučili. Vždycky se mi ta idea líbila a tak jsem se rozhodl se po této cestě vydat taky. Mít malý web, kde
-bude něco o mně a o tom, co zrovna dělám. Resumé, portfolio a blog.
+bude něco o mně a o tom, co zrovna dělám. Résumé, portfolio a blog.
 
 ## Technologický stack
 
