@@ -1,5 +1,6 @@
-module.exports = function (eleventyConfig) {
-    const pluginRss = require("@11ty/eleventy-plugin-rss");
+module.exports = async function (eleventyConfig) {
+    // RSS plugin je od verze 3 ES modul, do CommonJS configu se načítá přes import()
+    const { default: pluginRss } = await import("@11ty/eleventy-plugin-rss");
     eleventyConfig.addPlugin(pluginRss);
 
     eleventyConfig.addPassthroughCopy("src/assets/css");

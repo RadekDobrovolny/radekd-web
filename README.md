@@ -6,7 +6,7 @@ Můj osobní web sloužící jako portfolio, CV a blog. Inspiroval jsem se grafi
 
 ## Tech Stack
 
-- **[Eleventy](https://www.11ty.dev/)** (v2.0.1) - Statický generátor stránek
+- **[Eleventy](https://www.11ty.dev/)** (v3) - Statický generátor stránek
 - **[Nunjucks](https://mozilla.github.io/nunjucks/)** - Template engine
 - **Node.js** 24.x (LTS)
 - **GitHub Pages** - Hosting
