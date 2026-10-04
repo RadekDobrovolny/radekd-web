@@ -1,8 +1,6 @@
 ---
 title: "Překračování hranic"
-layout: post
-tags: 
-  - post
+tags:
   - portfolio
   - workshop
   - web
@@ -10,14 +8,11 @@ tags:
 desc: 'Digitální artefakt: workshop na Zimní škole KISKu'
 date: 2025-03-24
 permalink: '/post/prekracovani-hranic.html'
+translationKey: winter-school
 lang: cs
-alternateUrl: '/post/crossing-boundaries.html'
-alternateLang: en
 
 img: '/assets/images/posts/009-zimni-skola.png'
 ---
-
-<p>{{ date | postDate }}</p>
 
 # Digitální artefakt: workshop na Zimní škole KISKu
 

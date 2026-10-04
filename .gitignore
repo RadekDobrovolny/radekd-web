@@ -18,6 +18,7 @@ yarn.lock
 # IDEs
 .vscode/
 .idea/
+.claude/launch.json
 *.swp
 *.swo
 *~

@@ -1,17 +1,14 @@
 ---
-title: "What is love?"
-layout: post
-tags: 
-  - post
+title: "Co je láska?"
+tags:
   - portfolio
   - web
   - fun
-desc: 'Just another mini project from KISK Summer School 2022'
+desc: 'Další miniprojekt z Letní školy KISKu 2022'
 date: 2024-06-28
 permalink: '/post/co-je-laska.html'
+translationKey: love
 lang: cs
-alternateUrl: '/post/what-is-love.html'
-alternateLang: en
 
 img: '/assets/images/posts/008-love.png'
 ---

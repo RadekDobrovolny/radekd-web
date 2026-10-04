@@ -8,7 +8,7 @@ layout: posts
 title: "Posts"
 ---
 
-{% assign posts = collections.post | filterByCategory: category | onlyDefaultLang %}
+{% assign posts = collections.post | filterByCategory: category | onePerTranslation %}
 {% for post in posts reversed %}
 {% include "partials/_item-list.njk" %}
 {% endfor %}

@@ -1,17 +1,13 @@
 ---
 title: "What is love?"
-layout: post
-tags: 
-  - post
+tags:
   - portfolio
   - web
   - fun
 desc: 'Just another mini project from KISK Summer School 2022'
 date: 2024-06-28
 permalink: '/post/what-is-love.html'
-lang: en
-alternateUrl: '/post/co-je-laska.html'
-alternateLang: cs
+translationKey: love
 
 img: '/assets/images/posts/008-love.png'
 ---

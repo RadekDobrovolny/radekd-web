@@ -1,22 +1,16 @@
 ---
 title: "Šuplík"
-layout: post
 tags:
-  - post
   - portfolio
   - web
   - fun
 desc: 'Digital drawer for ideas'
 date: 2026-02-07
 permalink: '/post/drawer.html'
-lang: en
-alternateUrl: '/post/suplik.html'
-alternateLang: cs
+translationKey: suplik
 
 img: '/assets/images/posts/010-light.png'
 ---
-
-<p>{{ date | postDate }}</p>
 
 # Drawer: Digital drawer for ideas
 

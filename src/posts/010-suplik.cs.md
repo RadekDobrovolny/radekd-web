@@ -1,22 +1,17 @@
 ---
 title: "Šuplík"
-layout: post
 tags:
-  - post
   - portfolio
   - web
   - fun
 desc: 'Digitální šuplík na nápady'
 date: 2026-02-07
 permalink: '/post/suplik.html'
+translationKey: suplik
 lang: cs
-alternateUrl: '/post/drawer.html'
-alternateLang: en
 
 img: '/assets/images/posts/010-light.png'
 ---
-
-<p>{{ date | postDate }}</p>
 
 # Šuplík: Digitální šuplík na nápady
 

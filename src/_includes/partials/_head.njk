@@ -1,23 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang or 'en' }}">
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>{{ site.title }} — {{ title }}</title>
-    <meta name="description" content="{{ site.description }}">
+    <!-- Režim se nastaví ještě před vykreslením, ať při načtení neblikne světlá verze.
+         Uložená volba z přepínače má přednost, jinak se řídí systémem. -->
+    <script>
+        (function () {
+            let stored = null;
+            try { stored = localStorage.getItem('dark-mode'); } catch (e) {}
+            const dark = stored !== null
+                ? stored === 'true'
+                : window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (dark) document.documentElement.classList.add('dark-mode');
+        })();
+    </script>
 
+    <title>{{ site.title }} — {{ title }}</title>
+    <meta name="description" content="{{ desc or site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
+
+    <!-- Náhled při sdílení: sociální sítě vyžadují absolutní URL -->
     <meta property="og:title" content="{{ site.title }} — {{ title }}">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ '/assets/images/meta-image.png' | url }}">
+    <meta property="og:description" content="{{ desc or site.description }}">
+    <meta property="og:type" content="{% if layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
+    <meta property="og:image" content="{{ site.url }}{{ '/assets/images/meta-image.png' | url }}">
     <meta property="og:image:alt" content="Dobrý den">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Druhá jazyková verze článku -->
+    {% set translation = collections.post | translationOf(translationKey, page.url) %}
+    {% if translation %}
+    <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url | url }}">
+    <link rel="alternate" hreflang="{{ translation.data.lang }}" href="{{ site.url }}{{ translation.url | url }}">
+    {% endif %}
+
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | url }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | url }}">
 
-    <!-- Preload LCP image -->
+    {% if page.url == '/' %}
+    <!-- Preload LCP image (profilovka je jen na úvodní stránce) -->
     <link rel="preload" as="image" href="{{ '/assets/images/profile-bw-trans.png' | url }}">
+    {% endif %}
 
     <!-- Preload local fonts -->
     <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/outfit-latin-wght-normal.woff2' | url }}" crossorigin>

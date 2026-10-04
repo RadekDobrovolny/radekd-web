@@ -5,13 +5,15 @@
     <div class="main-container">
         <section class="content-row">
             <div class="card resume">
-                {% if alternateUrl %}
+                {% set translation = collections.post | translationOf(translationKey, page.url) %}
+                {% if translation %}
                 <div class="language-switch">
-                    <a href="{{ alternateUrl }}" lang="{{ alternateLang }}" class="language-toggle">
-                        {% if alternateLang == 'en' %}🇺🇸 English (AI){% else %}🇨🇿 Czech (original){% endif %}
+                    <a href="{{ translation.url | url }}" lang="{{ translation.data.lang }}" class="language-toggle">
+                        {% if translation.data.lang == 'en' %}🇺🇸 English (AI){% else %}🇨🇿 Czech (original){% endif %}
                     </a>
                 </div>
                 {% endif %}
+                <p>{{ page.date | postDate(lang) }}</p>
                 {{ content | nonBreakingSpaces | breakableLinks | safe }}
             </div>
         </section>

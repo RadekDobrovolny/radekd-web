@@ -1,14 +1,13 @@
 ---
 title: "Rýmovanda"
-layout: post
-tags: 
-  - post
+tags:
   - portfolio
   - web
   - fun
 desc: 'Jam-like project. Playing with words just for fun'
 date: 2024-06-28
 permalink: '/post/rymovanda.html'
+draft: true
 
 img: '/assets/images/posts/007-rymovanda.png'
 ---

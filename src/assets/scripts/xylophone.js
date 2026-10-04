@@ -1,30 +1,34 @@
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const audioBuffers = {};
-let isLoading = true;
+let audioContext = null;
+let loading = null;
 
-// Načti všechny audio soubory do bufferů
-async function loadAudioFiles() {
-    const promises = Object.entries(notes).map(async ([note, url]) => {
-        try {
-            const response = await fetch(url);
-            const arrayBuffer = await response.arrayBuffer();
-            const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-            audioBuffers[note] = audioBuffer;
-        } catch (err) {
-            console.error(`Failed to load ${note}:`, err);
-        }
-    });
-
-    await Promise.all(promises);isLoading = false;
+// Načti všechny audio soubory do bufferů, ale až když je někdo opravdu potřebuje
+function loadAudioFiles() {
+    if (!loading) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        loading = Promise.all(Object.entries(notes).map(async ([note, url]) => {
+            try {
+                const response = await fetch(url);
+                const arrayBuffer = await response.arrayBuffer();
+                audioBuffers[note] = await audioContext.decodeAudioData(arrayBuffer);
+            } catch (err) {
+                console.error(`Failed to load ${note}:`, err);
+            }
+        }));
+    }
+    return loading;
 }
 
-function playNote(note) {
-    if (isLoading || !audioBuffers[note]) return;
+async function playNote(note) {
+    const ready = loadAudioFiles();
 
-    // Obnovení audio kontextu po user interaction (mobilní požadavek)
+    // Obnovení audio kontextu po user interaction (mobilní požadavek), musí proběhnout ještě před await
     if (audioContext.state === 'suspended') {
         audioContext.resume();
     }
+
+    await ready;
+    if (!audioBuffers[note]) return;
 
     // Vytvoř nový source node pro každé přehrání
     const source = audioContext.createBufferSource();
@@ -33,8 +37,14 @@ function playNote(note) {
     source.start(0);
 }
 
-// Načti audio soubory při startu
-loadAudioFiles();
+// Na desktopu začni stahovat už při najetí myší, ať první úder nečeká
+document.querySelector('.xylophone').addEventListener('pointerenter', loadAudioFiles, { once: true });
+
+// Na dotykových zařízeních se :active kvůli preventDefault neprojeví, stisk naznačí třída
+function pressKey(key) {
+    key.classList.add('pressed');
+    setTimeout(() => key.classList.remove('pressed'), 150);
+}
 
 document.querySelectorAll('.key').forEach(key => {
     const note = key.getAttribute('data-note');
@@ -43,6 +53,7 @@ document.querySelectorAll('.key').forEach(key => {
     key.addEventListener('touchstart', (e) => {
         e.preventDefault();
         playNote(note);
+        pressKey(key);
     }, { passive: false });
 
     key.addEventListener('click', () => {
@@ -50,13 +61,21 @@ document.querySelectorAll('.key').forEach(key => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    if (localStorage.getItem('dark-mode') === 'true') {
-        document.body.classList.add('dark-mode');
-    }
-});
+// Výchozí režim nastavuje skript v <head>, tady je jen přepínač a sledování systému
+const root = document.documentElement;
 
 document.getElementById('switch').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+    root.classList.toggle('dark-mode');
+    try {
+        localStorage.setItem('dark-mode', root.classList.contains('dark-mode'));
+    } catch (e) {}
+});
+
+// Dokud si návštěvník režim sám nepřepne, mění se se systémem i za běhu
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    let stored = null;
+    try { stored = localStorage.getItem('dark-mode'); } catch (err) {}
+    if (stored === null) {
+        root.classList.toggle('dark-mode', e.matches);
+    }
 });

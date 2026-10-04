@@ -26,7 +26,29 @@
     font-weight: 100 900;
     font-display: swap;
     /* @fontsource-variable/lexend-mega → node_modules/.../files → /assets/fonts */
+    src: url("/assets/fonts/lexend-mega-latin-ext-wght-normal.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: "Lexend Mega";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    /* @fontsource-variable/lexend-mega → node_modules/.../files → /assets/fonts */
     src: url("/assets/fonts/lexend-mega-latin-wght-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 100%;
+    font-display: swap;
+    /* @fontsource-variable/outfit → node_modules/.../files → /assets/fonts */
+    src: url("/assets/fonts/outfit-latin-ext-wght-normal.woff2") format("woff2");
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 @font-face {
@@ -37,6 +59,7 @@
     font-display: swap;
     /* @fontsource-variable/outfit → node_modules/.../files → /assets/fonts */
     src: url("/assets/fonts/outfit-latin-wght-normal.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -61,8 +84,8 @@
 :root {
     --text-color: #282825;
     --shadow-color: black;
-    --border: 3px solid black;
-    --thic-shadow: 6px 8px black;
+    --radius-sm: 6px;
+    --radius-lg: 12px;
     color: var(--text-color);
     background: white;
 }
@@ -72,6 +95,11 @@ html {
 }
 
 body {
+    /* Tokeny odvozené od --shadow-color jsou až na body, aby je přebarvil i tmavý režim */
+    --border: 3px solid var(--shadow-color);
+    --shadow-sm: 3px 3px 0 var(--shadow-color);
+    --shadow-md: 5px 5px 0 var(--shadow-color);
+    --shadow-lg: 8px 8px 0 var(--shadow-color);
     font-family: "Lexend Mega", sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -79,28 +107,34 @@ body {
 }
 
 a {
-    color: #ff69b4;
+    color: #c71f6b;
     text-decoration: none;
     overflow-wrap: break-word;
     word-break: normal;
     hyphens: none;
 }
 
+:focus-visible {
+    outline: 3px solid var(--text-color);
+    outline-offset: 4px;
+}
+
 /* ===== DARK MODE ===== */
 
-body.dark-mode {
-    --text-color: #f6f7f8;
-    --shadow-color: #ffd966;
-    --border: 3px solid var(--shadow-color);
-    --thic-shadow: 8px 8px var(--shadow-color);
-    --background-color: #111827;
+/* Lesní paleta: každá zmrzlinová barva má svůj protějšek v lese */
+html.dark-mode {
+    --text-color: #eef2e8;
+    --background-color: #0f1e17;  /* noční les (jahoda) */
+    --surface-color: #172b21;     /* podrost (máta) */
+    --shadow-color: #c5dca5;      /* lišejník: rámečky a stíny (černá) */
+    --accent-color: #ffd966;      /* světluška: odkazy a zvýraznění (malina) */
+    color-scheme: dark;
     color: var(--text-color);
     background: var(--background-color);
 }
 
-body.dark-mode a {
-    color: #ffd966;
-    text-decoration: none;
+html.dark-mode a {
+    color: var(--accent-color);
 }
 
 /* ===== LAYOUT ===== */
@@ -116,11 +150,11 @@ main {
     background: #ff69b4;
 }
 
-body.dark-mode main {
+html.dark-mode main {
     background: var(--background-color);
 }
 
-section.content-row {
+.content-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -143,9 +177,9 @@ header {
     align-items: normal;
 }
 
-body.dark-mode header {
+html.dark-mode header {
     background: var(--background-color);
-    color: white;
+    color: var(--text-color);
 }
 
 header nav {
@@ -157,8 +191,9 @@ header nav {
 header ul {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
     list-style: none;
-    margin-left: 1.4em;
+    margin-left: 0.6em;
 }
 
 header a,
@@ -167,7 +202,47 @@ header a,
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.3rem;
-    padding-right: 2rem;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 2px 10px;
+    border: 3px solid transparent;
+    border-radius: var(--radius-sm);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+header nav a[aria-current="page"] {
+    background: #ffe599;
+    border-color: var(--shadow-color);
+}
+
+html.dark-mode header nav a {
+    color: var(--text-color);
+}
+
+html.dark-mode header nav a[aria-current="page"] {
+    background: var(--shadow-color);
+    color: var(--background-color);
+}
+
+header nav a:focus-visible {
+    border-color: var(--shadow-color);
+    box-shadow: var(--shadow-sm);
+    transform: translate(-2px, -2px);
+}
+
+@media (hover: hover) {
+    header nav a:hover {
+        border-color: var(--shadow-color);
+        box-shadow: var(--shadow-sm);
+        transform: translate(-2px, -2px);
+    }
+}
+
+header nav a:active {
+    box-shadow: none;
+    transform: translate(1px, 1px);
 }
 
 /* ===== THEME SWITCH ===== */
@@ -182,7 +257,14 @@ header a,
 
 .switch img {
     padding: 6px;
-    border-radius: 10px;
+    border-radius: var(--radius-sm);
+    transition: transform 0.15s ease;
+}
+
+@media (hover: hover) {
+    .switch:hover img {
+        transform: rotate(-10deg);
+    }
 }
 
 .ice-cream {
@@ -193,11 +275,11 @@ header a,
     background: transparent;
 }
 
-body.dark-mode .ice-cream {
+html.dark-mode .ice-cream {
     background: transparent;
 }
 
-body.dark-mode .spruce {
+html.dark-mode .spruce {
     background: var(--shadow-color);
 }
 
@@ -212,27 +294,44 @@ body.dark-mode .spruce {
 }
 
 .key {
+    /* Barva klávesy je přechod mezi --key-from a --key-to podle pořadí --i (0–7) */
+    --key-from: #ffbf00;
+    --key-to: #ffecb3;
+    background-color: color-mix(in srgb, var(--key-to) calc(var(--i) / 7 * 100%), var(--key-from));
     flex: 1;
     width: 108px;
     height: 65px;
     margin-top: -30px;
     border: var(--border);
-    border-radius: 15px;
-    box-shadow: 2px 3px black;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
     cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-body.dark-mode .key {
-    border: 2px solid var(--shadow-color);
-    box-shadow: 2px 3px var(--shadow-color);
+@media (hover: hover) {
+    .key:hover {
+        transform: translateY(4px);
+    }
+}
+
+html.dark-mode .key {
+    --key-from: #297045;
+    --key-to: #c5dca5;
+}
+
+.key:active,
+.key.pressed {
+    transform: translate(3px, 7px);
+    box-shadow: none;
 }
 
 /* ===== CARDS ===== */
 
 .card {
     border: var(--border);
-    box-shadow: var(--thic-shadow);
-    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-lg);
     padding: 20px;
     margin: 40px 20px 20px 20px;
     text-align: left;
@@ -271,8 +370,8 @@ body.dark-mode .key {
     line-height: 1;
 }
 
-body.dark-mode .welcome {
-    background: #297045;
+html.dark-mode .welcome {
+    background: #297045; /* mech (vanilka) */
     font-weight: 300;
 }
 
@@ -287,8 +386,8 @@ body.dark-mode .welcome {
     min-width: 300px;
 }
 
-body.dark-mode .profile-photo {
-    background: #764134;
+html.dark-mode .profile-photo {
+    background: #764134; /* kůra (pistácie) */
 }
 
 .profile-photo h2 {
@@ -312,8 +411,8 @@ body.dark-mode .profile-photo {
     height: fit-content;
 }
 
-body.dark-mode .tags {
-    background: #297045;
+html.dark-mode .tags {
+    background: #2c5e50; /* smrk (jahodové mléko) */
 }
 
 .tag-list {
@@ -327,20 +426,20 @@ body.dark-mode .tags {
     background: white;
     color: black;
     border: var(--border);
-    border-radius: 5px;
-    box-shadow: 4px 4px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
     padding: 5px 15px;
     margin: 8px;
     font-family: "Outfit", sans-serif;
     font-size: 1.2em;
     cursor: pointer;
     text-decoration: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-body.dark-mode .tag {
+html.dark-mode .tag {
     background: #764134;
-    border: var(--border);
-    box-shadow: 4px 4px var(--shadow-color);
+    color: var(--text-color);
 }
 
 .item-tags {
@@ -356,10 +455,11 @@ body.dark-mode .tag {
     font-size: 0.8em;
     font-weight: 500;
     border: 3px solid black;
+    border-radius: var(--radius-sm);
 }
 
-body.dark-mode .item-tag {
-    background: #ffe599;
+html.dark-mode .item-tag {
+    background: #dde9c9;
 }
 
 /* ===== BLOG & POSTS ===== */
@@ -370,14 +470,13 @@ body.dark-mode .item-tag {
     margin: 60px 20px;
 }
 
-body.dark-mode .recent {
-    background: var(--background-color);
+html.dark-mode .recent {
+    background: var(--surface-color);
 }
 
 .blog-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
     gap: 40px;
     margin: 40px 0;
 }
@@ -389,34 +488,63 @@ body.dark-mode .recent {
 .blog-item {
     background-color: white;
     border: var(--border);
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     padding: 30px;
     text-align: left;
-    box-shadow: 4px 4px;
-    width: 320px;
-    height: fit-content;
+    box-shadow: var(--shadow-md);
+    height: 100%;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-body.dark-mode .blog-item {
-    background-color: white;
+html.dark-mode .blog-item {
+    background-color: #f3eee0; /* březová kůra (bílá) */
     border: 3px solid var(--background-color);
-    box-shadow: 3px 4px var(--shadow-color);
     color: black;
+}
+
+/* Neobrutalistické „zmáčknutí“: prvek povyskočí ze stínu a při kliknutí do něj zajede */
+.blog-list a:focus-visible {
+    outline: none;
+}
+
+.blog-list a:focus-visible .blog-item,
+.tag:focus-visible,
+.language-toggle:focus-visible {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--shadow-lg);
+}
+
+@media (hover: hover) {
+    .blog-list a:hover .blog-item,
+    .tag:hover,
+    .language-toggle:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: var(--shadow-lg);
+    }
+}
+
+.blog-list a:active .blog-item,
+.tag:active,
+.language-toggle:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
 }
 
 .blog-item img {
     display: block;
     background: #daf5f0;
-    height: 250px;
-    width: 250px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     margin: 0 auto 20px auto;
     border: var(--border);
 }
 
-body.dark-mode .blog-item img {
+html.dark-mode .blog-item img {
     border: 3px solid var(--background-color);
-    background: #ffe599;
+    background: #dde9c9;
 }
 
 .blog-item h3 {
@@ -444,8 +572,8 @@ body.dark-mode .blog-item img {
     font-family: "Cabin", sans-serif;
 }
 
-body.dark-mode .resume {
-    background: var(--background-color);
+html.dark-mode .resume {
+    background: var(--surface-color);
 }
 
 .resume h1,
@@ -490,13 +618,31 @@ body.dark-mode .resume {
     list-style-position: inside;
 }
 
-body.dark-mode .resume h1,
-body.dark-mode .resume h2 {
+html.dark-mode .resume h1,
+html.dark-mode .resume h2 {
     color: var(--background-color);
+}
+
+html.dark-mode .resume h1 {
+    background: var(--shadow-color);
+}
+
+html.dark-mode .resume h2 {
+    background: #dde9c9;
 }
 
 .resume a {
     text-decoration: underline;
+}
+
+.resume a:hover {
+    background: #ffe599;
+    color: var(--text-color);
+}
+
+html.dark-mode .resume a:hover {
+    background: var(--accent-color);
+    color: var(--background-color);
 }
 
 /* ===== POLAROID IMAGES ===== */
@@ -508,11 +654,11 @@ body.dark-mode .resume h2 {
     transform: rotate(-8deg);
     transition: transform 0.2s;
     border: var(--border);
-    box-shadow: 8px 8px var(--shadow-color);
+    box-shadow: var(--shadow-lg);
     pointer-events: none;
 }
 
-body.dark-mode .polaroid {
+html.dark-mode .polaroid {
     border: 3px solid black;
 }
 
@@ -563,16 +709,17 @@ body.dark-mode .polaroid {
     padding: 8px 16px;
     background: white;
     border: var(--border);
-    box-shadow: 4px 4px var(--shadow-color);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
     text-decoration: none;
     color: var(--text-color);
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-body.dark-mode .language-toggle {
-    background: var(--background-color);
+html.dark-mode .language-toggle {
+    background: var(--surface-color);
     color: var(--text-color);
 }
 
@@ -582,9 +729,9 @@ footer {
     background: #ff69b4;
 }
 
-body.dark-mode footer {
+html.dark-mode footer {
     background: var(--background-color);
-    color: #ffd966;
+    color: var(--text-color);
 }
 
 .footer-sign {
@@ -606,7 +753,8 @@ body.dark-mode footer {
 
 .footer-card {
     flex: 1;
-    font-size: 0.8rem;
+    font-family: "Cabin", sans-serif;
+    font-size: 1rem;
 }
 
 footer .footer-msg {
@@ -615,17 +763,34 @@ footer .footer-msg {
     padding-bottom: 30px;
 }
 
+/* Odkazy a ikonky v patičce: jahodové mléko ve zmrzlině, světluška v lese (přes html.dark-mode a / .bx) */
 footer a {
-    color: #fff;
+    color: #fff2f1;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    background: #fff2f1;
+    color: var(--text-color);
+}
+
+html.dark-mode footer a:hover,
+html.dark-mode footer a:focus-visible {
+    background: var(--accent-color);
+    color: var(--background-color);
 }
 
 footer .bx {
     font-size: 2.5rem;
-    color: #000;
+    color: #fff2f1;
 }
 
-body.dark-mode .bx {
-    color: #ffd966;
+html.dark-mode .bx {
+    color: var(--accent-color);
 }
 
 /* ===== RESPONSIVE - TABLET ===== */
@@ -634,13 +799,12 @@ body.dark-mode .bx {
     header ul {
         align-content: center;
         align-items: center;
-        gap: 2em;
+        gap: 0.4em;
     }
 
     header a,
     .switch {
         font-size: 1.2rem;
-        padding-right: 0;
     }
 
     .content-row {
@@ -694,14 +858,17 @@ body.dark-mode .bx {
         width: 100%;
         flex-wrap: wrap;
         align-items: center;
-        gap: 1em;
+        gap: 4px;
         margin: 0;
     }
 
     header a,
     .switch {
         font-size: 1rem;
-        padding-right: 0;
+    }
+
+    header nav a {
+        padding: 2px 6px;
     }
 
     button.switch img {
@@ -717,8 +884,7 @@ body.dark-mode .bx {
 
     .key {
         height: 65px;
-        box-shadow: 1px 2px black;
-        border-radius: 8px;
+        border-radius: var(--radius-sm);
     }
 
     .content-row {
@@ -734,21 +900,6 @@ body.dark-mode .bx {
 
     .profile-photo {
         padding-top: 230px;
-    }
-
-    .blog-list {
-        flex-direction: column;
-        gap: 80px;
-    }
-
-    .blog-item {
-        width: 100%;
-        align-content: center;
-    }
-
-    .blog-item img {
-        width: 100%;
-        height: 100%;
     }
 
     .resume {
@@ -770,5 +921,15 @@ body.dark-mode .bx {
         transform: none;
         shape-outside: none;
         float: none;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
     }
 }

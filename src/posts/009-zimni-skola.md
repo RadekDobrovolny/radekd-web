@@ -1,8 +1,6 @@
 ---
 title: "Crossing Boundaries"
-layout: post
-tags: 
-  - post
+tags:
   - portfolio
   - workshop
   - web
@@ -10,13 +8,10 @@ tags:
 desc: 'Digital Artifact: Workshop at KISK Winter School'
 date: 2025-03-24
 permalink: '/post/crossing-boundaries.html'
-alternateUrl: '/post/prekracovani-hranic.html'
-alternateLang: cs
+translationKey: winter-school
 
 img: '/assets/images/posts/009-zimni-skola.png'
 ---
-
-<p>{{ date | postDate }}</p>
 
 # Digital Artifact: Workshop at KISK Winter School
 
