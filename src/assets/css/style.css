@@ -215,6 +215,7 @@ header nav a {
 header nav a[aria-current="page"] {
     background: #ffe599;
     border-color: var(--shadow-color);
+    box-shadow: var(--shadow-sm);
 }
 
 html.dark-mode header nav a {
@@ -223,6 +224,7 @@ html.dark-mode header nav a {
 
 html.dark-mode header nav a[aria-current="page"] {
     background: var(--shadow-color);
+    border-color: var(--background-color); /* tmavý obrys, ať stín se štítkem nesplyne */
     color: var(--background-color);
 }
 
